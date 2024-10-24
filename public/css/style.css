@@ -1,0 +1,64 @@
+
+/* NavBar */
+
+    /* NavBar Links */
+        .navbar-nav .nav-link {
+            transition: transform 0.3s ease; 
+        }
+
+        .navbar-nav .nav-link:hover {
+            transform: scale(1.05); 
+            color: #6285C4;
+        }
+
+
+    /* Botón NavBar - Registrarse */
+        .btn.btn-sm.btn-outline-primary{
+            border-color: #6285C4;
+            background-color: white;
+            color: #6285C4;
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+            border-radius: 12px;
+            border-width: 3px; 
+            font-weight: bold;
+        }
+
+        .btn.btn-sm.btn-outline-primary:hover{
+            transform: scale(1.05);
+        }
+
+
+    /* Botón NavBar - Iniciar Sesión */
+        .btn.btn-sm.btn-outline-secondary{
+            border-color: #6285C4;
+            background-color: #6285C4;
+            color: white;
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+            border-radius: 12px;
+            border-width: 3px;
+            font-weight: bold;
+        }
+
+        .btn.btn-sm.btn-outline-secondary:hover{
+            transform: scale(1.05);
+        }
+
+
+/* Footer */
+
+    footer{
+        background-color: #E8E8E8; 
+        padding-top: 20px; 
+    }
+
+    /* Footer Links */
+    .col-2 a{
+        color: black;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    } 
+
+    .col-2 a:hover{
+        color: #6285C4;
+        text-decoration: underline;
+    }
