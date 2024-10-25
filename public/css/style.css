@@ -19,7 +19,7 @@
             color: #6285C4;
             transition: background-color 0.3s ease, transform 0.3s ease; 
             border-radius: 12px;
-            border-width: 3px; 
+            border-width: 4px; 
             font-weight: bold;
         }
 
@@ -35,13 +35,49 @@
             color: white;
             transition: background-color 0.3s ease, transform 0.3s ease; 
             border-radius: 12px;
-            border-width: 3px;
+            border-width: 4px;
             font-weight: bold;
         }
 
         .btn.btn-sm.btn-outline-secondary:hover{
             transform: scale(1.05);
         }
+
+
+
+
+/* Hero Section */
+
+
+        /* Título */
+        .col-lg-6 .titulo {
+            font-size: 68px;
+            font-weight: bold;
+        }
+
+
+        /* Imagen */
+        .col-lg-6 img{
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .col-lg-6 p{
+            font-weight: bold;
+        }
+
+
+
+/* Nuestros Estudios */
+        .hr-custom{
+            border-top: 2px solid #484FFA; 
+            width: 40%;                   
+            margin: 20px auto;
+        }
+
+
+
+
 
 
 /* Footer */
