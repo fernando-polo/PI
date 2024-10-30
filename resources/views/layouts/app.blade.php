@@ -35,10 +35,16 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 
+        {{-- LLamar a SweetAlert --}}
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        
         {{-- Llamar a bootstrap --}}
         @vite('resources/js/app.js')
 
-
+      {{-- Notas: 
+      Acomodar posición del Logos
+      Arreglar footer --}}
 
     </head>
     <body>
@@ -46,7 +52,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light" id="NavBar">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">
-                    <img src="{{ asset('images/Logo1.jpeg') }}" alt="Logo - Clínica Médica" width="40" height="40">
+                    <a href="{{route('rutaInicio')}}"><img src="{{ asset('images/Logo1.jpeg') }}" alt="Logo - Clínica Médica" width="40" height="40"></a>
                   </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -71,8 +77,9 @@
                     </ul>
                     <div class="text-end">
                         <form class="container-fluid justify-content-end">
-                            <button class="btn btn-sm btn-outline-primary" type="button">Registrarse</button>
-                            <button class="btn btn-sm btn-outline-secondary" type="button">Iniciar sesión</button>
+                            <a href="{{route('rutaRegistro')}}" class="btn btn-sm btn-outline-primary">Registrarse</a>
+                            <a href="{{route('rutaIniciarSesion')}}" class="btn btn-sm btn-outline-secondary">Iniciar Sesión</a>
+                            
                         </form>
                     </div>
                   </div>

@@ -2,7 +2,7 @@
 
 
 
-@section('titulo', 'Clínica Médica')
+@section('titulo', 'MedCLINIC - Inicio')
 
 
 @section('contenido')
@@ -20,8 +20,8 @@
                         <br>
                     <div class="text-start">
                         <form>
-                            <button class="btn btn-sm btn-outline-primary" type="button">Conocer más</button>
-                            <button class="btn btn-sm btn-outline-secondary" type="button">Agendar cita</button>
+                            <a href="" class="btn btn-sm btn-outline-primary">Conocer más</a>
+                            <a href="{{route('rutaRegistro')}}" class="btn btn-sm btn-outline-secondary">Agendar Cita</a>
                         </form>
                     </div>
                 </div>

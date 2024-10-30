@@ -1,121 +1,127 @@
 
-/* NavBar */
+/* inicio.blade.php */
+    /* NavBar */
 
-    /* NavBar Links */
-        .navbar-nav .nav-link {
-            transition: transform 0.3s ease; 
+        /* NavBar Links */
+            .navbar-nav .nav-link {
+                transition: transform 0.3s ease; 
+            }
+
+            .navbar-nav .nav-link:hover {
+                transform: scale(1.05); 
+                color: #6285C4;
+            }
+
+
+        /* Botón NavBar - Registrarse */
+            .btn.btn-sm.btn-outline-primary{
+                border-color: #6285C4;
+                background-color: white;
+                color: #6285C4;
+                transition: background-color 0.3s ease, transform 0.3s ease; 
+                border-radius: 12px;
+                border-width: 4px; 
+                font-weight: bold;
+            }
+
+            .btn.btn-sm.btn-outline-primary:hover{
+                transform: scale(1.05);
+            }
+
+
+        /* Botón NavBar - Iniciar Sesión */
+            .btn.btn-sm.btn-outline-secondary{
+                border-color: #6285C4;
+                background-color: #6285C4;
+                color: white;
+                transition: background-color 0.3s ease, transform 0.3s ease; 
+                border-radius: 12px;
+                border-width: 4px;
+                font-weight: bold;
+            }
+
+            .btn.btn-sm.btn-outline-secondary:hover{
+                transform: scale(1.05);
+            }
+
+
+
+
+    /* Hero Section */
+
+
+            /* Título */
+            .col-lg-6 .titulo {
+                font-size: 68px;
+                font-weight: bold;
+            }
+
+
+            /* Imagen */
+            .col-lg-6 img{
+                border-radius: 12px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            }
+
+            .col-lg-6 p{
+                font-weight: bold;
+            }
+
+
+
+    /* Nuestros Estudios */
+            .hr-custom{
+                border-top: 2px solid #484FFA; 
+                width: 40%;                   
+                margin: 20px auto;
+            }
+
+            .container .container .row .card{
+                width: 14rem; 
+                height: 20rem; 
+                background-color: #E8E8E8;
+                border-radius: 12px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            }
+
+            .container .container .row .card .row img{
+                width: 100%; 
+                height: 10rem; 
+                object-fit: cover;
+            }
+
+
+    /* Footer */
+
+        footer{
+            background-color: #E8E8E8; 
+            padding-top: 20px; 
         }
 
-        .navbar-nav .nav-link:hover {
-            transform: scale(1.05); 
+        /* Footer Links */
+        .col-2 a{
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        } 
+
+        .col-2 a:hover{
             color: #6285C4;
+            text-decoration: underline;
         }
 
 
-    /* Botón NavBar - Registrarse */
-        .btn.btn-sm.btn-outline-primary{
-            border-color: #6285C4;
-            background-color: white;
-            color: #6285C4;
-            transition: background-color 0.3s ease, transform 0.3s ease; 
-            border-radius: 12px;
-            border-width: 4px; 
-            font-weight: bold;
-        }
+/* registro.blade.php */
 
-        .btn.btn-sm.btn-outline-primary:hover{
-            transform: scale(1.05);
-        }
-
-
-    /* Botón NavBar - Iniciar Sesión */
-        .btn.btn-sm.btn-outline-secondary{
-            border-color: #6285C4;
-            background-color: #6285C4;
-            color: white;
-            transition: background-color 0.3s ease, transform 0.3s ease; 
-            border-radius: 12px;
-            border-width: 4px;
-            font-weight: bold;
-        }
-
-        .btn.btn-sm.btn-outline-secondary:hover{
-            transform: scale(1.05);
-        }
-
-
-
-
-/* Hero Section */
-
-
-        /* Título */
-        .col-lg-6 .titulo {
-            font-size: 68px;
-            font-weight: bold;
-        }
-
-
-        /* Imagen */
-        .col-lg-6 img{
-            border-radius: 12px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .col-lg-6 p{
-            font-weight: bold;
-        }
-
-
-
-/* Nuestros Estudios */
-        .hr-custom{
-            border-top: 2px solid #484FFA; 
-            width: 40%;                   
-            margin: 20px auto;
-        }
-
-        .container .container .row .card{
-            width: 14rem; 
-            height: 20rem; 
+    /* Form */
+        .container-form.container {
             background-color: #E8E8E8;
             border-radius: 12px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        .container .container .row .card .row img{
-            width: 100%; 
-            height: 10rem; 
-            object-fit: cover;
+        .container .card .card-body .mb-3 .form-control{
+            background-color: white;
+            border-color: #6285C4;
+            border-width: 2px;
+
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Footer */
-
-    footer{
-        background-color: #E8E8E8; 
-        padding-top: 20px; 
-    }
-
-    /* Footer Links */
-    .col-2 a{
-        color: black;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    } 
-
-    .col-2 a:hover{
-        color: #6285C4;
-        text-decoration: underline;
-    }
