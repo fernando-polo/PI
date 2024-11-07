@@ -66,7 +66,7 @@
               </div>
               <br>
               <div class="row">
-                  <a href="#" class="btn btn-sm btn-outline-secondary">Densitometría</a>
+                  <a href="{{route('rutaseleccionarEstudio')}}" class="btn btn-sm btn-outline-secondary">Densitometría</a>
               </div>
           </div>
           

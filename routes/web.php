@@ -12,7 +12,13 @@ Route::get('/registro', [ControladorVistas::class, 'registro'])->name('rutaRegis
 
 Route::get('/iniciarSesion', [ControladorVistas::class, 'iniciarSesion'])->name('rutaIniciarSesion');
 
-Route::get('/iniciarSesion', [ControladorVistas::class, 'iniciarSesion'])->name('rutaIniciarSesion');
+
+// Validación que el usuario ya esté ingresado
+Route::get('/seleccionarEstudio', [ControladorVistas::class, 'seleccionarEstudio'])->name('rutaseleccionarEstudio');
+
+Route::get('/estudioSeleccionado', [ControladorVistas::class, 'estudioSeleccionado'])->name('rutaestudioSeleccionado');
+
+
 
 
 

@@ -21,7 +21,14 @@ class ControladorVistas extends Controller
         return view('iniciarSesion');
     }
 
-    
+    public function seleccionarEstudio(){
+        return view('seleccionarEstudio');
+    }
+
+    public function estudioSeleccionado(){
+        return view('estudioSeleccionado');
+    }
+
 
 
     public function registrarUsuario(validadorRegistroUsuarios $peticionValidada){
@@ -29,7 +36,7 @@ class ControladorVistas extends Controller
         // Redireción con valores en session
         $usuario = $peticionValidada->input('txtNombre');
     
-        session()->flash('exito', $usuario);
+        session()->flash('usuarioGuardado', $usuario);
     
         return to_route('rutaRegistro');
        }
@@ -40,7 +47,7 @@ class ControladorVistas extends Controller
         // Redireción con valores en session
         $correo = $peticionValidada->input('txtCorreo');
     
-        session()->flash('exito', $correo);
+        session()->flash('datosValidados', $correo);
     
         return to_route('rutaIniciarSesion');
        }

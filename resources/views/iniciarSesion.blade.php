@@ -5,9 +5,10 @@
 
 @section('contenido')
 
+<section style="min-height: 65vh;">
 <div class="container mt-5 col-md-6">
 
-      @session ('exito')
+      @session ('datosValidados')
         <script>
             Swal.fire({
               text: "Datos correctos",
@@ -54,6 +55,7 @@
   </div>
   <br>
 
+</section>
 
 @endsection
 

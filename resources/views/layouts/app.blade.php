@@ -43,6 +43,8 @@
         @vite('resources/js/app.js')
 
       {{-- Notas: 
+      Definir los estilos de los span
+      Hacer yields para los datos necesarios del head
       Acomodar posición del Logos
       Arreglar footer --}}
 
