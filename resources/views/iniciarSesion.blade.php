@@ -50,6 +50,7 @@
             </div>
           </div>
         </form>
+        <h5 class="mt-3" style="font-size: 12px"><a href="#"><span style="color: #484FFA">¿Olvidaste tu contraseña?</span></a></h5>
       </div>
     </div>
   </div>

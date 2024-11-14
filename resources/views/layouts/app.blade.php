@@ -43,7 +43,6 @@
         @vite('resources/js/app.js')
 
       {{-- Notas: 
-      Definir los estilos de los span
       Hacer yields para los datos necesarios del head
       Acomodar posición del Logos
       Arreglar footer --}}
@@ -62,19 +61,16 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Ubícanos</a>
+                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#NuestrosEstudios">Estudios</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Testimonios</a>
+                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#MedicosDePrimera">Médicos</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Conócenos</a>
+                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#Testimonios">Testimonios</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Estudios</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Médicos</a>
+                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#SobreNosotros">Conócenos</a>
                       </li>
                     </ul>
                     <div class="text-end">
@@ -112,15 +108,13 @@
                     <div class="col-2">
                         <h5>Clínica</h5>
                         <br>
-                        <a href=""><h6>Ubícanos</h6></a>
+                        <a href="#Testimonios"><h6>Testimonios</h6></a>
                         <br>
-                        <a href=""><h6>Testimonios</h6></a>
+                        <a href="#SobreNosotros"><h6>Conócenos</h6></a>
                         <br>
-                        <a href=""><h6>Conócenos</h6></a>
+                        <a href="#NuestrosEstudios"><h6>Estudios</h6></a>
                         <br>
-                        <a href=""><h6>Estudios</h6></a>
-                        <br>
-                        <a href=""><h6>Médicos</h6></a>
+                        <a href="#MedicosDePrimera"><h6>Médicos</h6></a>
                         <br>
                     </div>
                     <div class="col-2">

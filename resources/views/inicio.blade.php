@@ -8,7 +8,7 @@
 @section('contenido')
 
 {{-- Hero Section --}}
-<section style="min-height: 65vh;">
+<section style="min-height: 65vh;" id="HeroSection">
     <br>
     <br>
         <div class="container">
@@ -20,7 +20,7 @@
                         <br>
                     <div class="text-start">
                         <form>
-                            <a href="" class="btn btn-sm btn-outline-primary">Conocer más</a>
+                            <a href="#NuestrosEstudios" class="btn btn-sm btn-outline-primary">Conocer más</a>
                             <a href="{{route('rutaRegistro')}}" class="btn btn-sm btn-outline-secondary">Agendar Cita</a>
                         </form>
                     </div>
@@ -36,7 +36,7 @@
     <br>
 </section>
 {{-- Nuestros Estudios --}}
-<section style="min-height: 75vh;">
+<section style="min-height: 75vh;" id="NuestrosEstudios">
     <br>
     <br>
     <div class="container text-center">
@@ -56,7 +56,7 @@
               </div>
               <br>
               <div class="row">
-                  <a href="#" class="btn btn-sm btn-outline-secondary">Mastografía</a>
+                  <a href="{{route('rutaseleccionarEstudio')}}" class="btn btn-sm btn-outline-secondary">Mastografía</a>
               </div>
           </div>
           
@@ -76,7 +76,7 @@
               </div>
               <br>
               <div class="row">
-                  <a href="#" class="btn btn-sm btn-outline-secondary">Papanicolau</a>
+                  <a href="{{route('rutaseleccionarEstudio')}}" class="btn btn-sm btn-outline-secondary">Papanicolau</a>
               </div>
           </div>
           
@@ -86,7 +86,7 @@
               </div>
               <br>
               <div class="row">
-                  <a href="#" class="btn btn-sm btn-outline-secondary">Ultrasonido</a>
+                  <a href="{{route('rutaseleccionarEstudio')}}" class="btn btn-sm btn-outline-secondary">Ultrasonido</a>
               </div>
           </div>
           
@@ -96,7 +96,7 @@
               </div>
               <br>
               <div class="row">
-                  <a href="#" class="btn btn-sm btn-outline-secondary">VPH</a>
+                  <a href="{{route('rutaseleccionarEstudio')}}" class="btn btn-sm btn-outline-secondary">Electrocardiograma</a>
               </div>
           </div>
           
@@ -110,7 +110,7 @@
 </section>
 
 {{-- Médicos de primera --}}
-<section style="min-height: 75vh;">
+<section style="min-height: 75vh;" id="MedicosDePrimera">
   <br>
   <br>
   <div class="container text-center">
@@ -186,7 +186,7 @@
 </section>
 
 {{-- Tu Testimonio importa --}}
-<section style="min-height: 75vh;">
+<section style="min-height: 75vh;" id="Testimonios">
   <br>
   <br>
   <div class="container text-center">
@@ -263,7 +263,7 @@
 
 
 {{-- Sobre nosotros --}}
-<section style="min-height: 75vh;">
+<section style="min-height: 75vh;" id="SobreNosotros">
   <br>
   <br>
   <div class="container text-center">
