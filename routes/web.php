@@ -2,12 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControladorVistas;
-
-
+use App\Http\Controllers\usuariosController;
 
 // Rutas "deafult"
 Route::get('/', [ControladorVistas::class, 'home'])->name('rutaInicio');
-Route::get('/registro', [ControladorVistas::class, 'registro'])->name('rutaRegistro');
 Route::get('/iniciarSesion', [ControladorVistas::class, 'iniciarSesion'])->name('rutaIniciarSesion');
 
 
@@ -28,5 +26,9 @@ Route::get('/historialDeCitas', [ControladorVistas::class, 'historialDeCitas'])-
 
 
 // Rutas de los Forms
-Route::post('/registrarUsuario', [ControladorVistas::class, 'registrarUsuario'])->name('rutaRegistrarUsuario');
 Route::post('/iniciarSesionFormulario', [ControladorVistas::class, 'iniciarSesionFormulario'])->name('rutainiciarSesionFormulario');
+
+// Rutas de usuariosController
+Route::get('/registro/create', [usuariosController::class, 'create'])->name('rutaRegistro');
+Route::post('/registro', [usuariosController::class, 'store'])->name('enviarUsuario');
+Route::get('/usuariosGuardados', [usuariosController::class, 'index'])->name('rutausuariosGuardados');

@@ -25,7 +25,7 @@
         </div>
     
         <div class="card-body text-justify">
-          <form action="/registrarUsuario" method="post" id="formRegistro">
+          <form action="{{route('enviarUsuario')}}" method="post" id="formRegistro">
             @csrf    
             <div class="mb-3">
               <label for="CURP" class="form-label">CURP: </label>

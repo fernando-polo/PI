@@ -15,10 +15,6 @@ class ControladorVistas extends Controller
             return view('inicio');
         }
 
-        public function registro(){
-            return view('registro');
-        }
-
         public function iniciarSesion(){
             return view('iniciarSesion');
         }
@@ -60,15 +56,15 @@ class ControladorVistas extends Controller
 
 
     // Rutas de los forms
-        public function registrarUsuario(validadorRegistroUsuarios $peticionValidada){
+        // public function registrarUsuario(validadorRegistroUsuarios $peticionValidada){
 
-            // Redireción con valores en session
-            $usuario = $peticionValidada->input('txtNombre');
+        //     // Redireción con valores en session
+        //     $usuario = $peticionValidada->input('txtNombre');
         
-            session()->flash('usuarioGuardado', $usuario);
+        //     session()->flash('usuarioGuardado', $usuario);
         
-            return to_route('rutaRegistro');
-        }
+        //     return to_route('rutaRegistro');
+        // }
 
 
         public function iniciarSesionFormulario(validadorIniciarSesion $peticionValidada){
