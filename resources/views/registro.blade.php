@@ -12,16 +12,20 @@
 
         @session ('usuarioGuardado')
           <script>
-              Swal.fire({
+            Swal.fire({
                 text: "Se guardó el usuario: {{$value}}",
-                icon: "success"
+                icon: "success",
+                confirmButtonText: "Aceptar",
+                customClass: {
+                    confirmButton: 'custom-confirm-button-usuarioGuardado'
+                }
             });
           </script>
         @endsession
 
       <div class="card">
         <div class="card-header fs-5 text-center text-primary">
-          ¡Regístrate para agendar una cita!
+          <span style="color: #ff5733">¡Regístrate para agendar una cita!</span>
         </div>
     
         <div class="card-body text-justify">

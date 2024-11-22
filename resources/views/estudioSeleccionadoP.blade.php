@@ -18,11 +18,11 @@
         <div class="row gap-4 justify-content-center mb-5 mt-5 text-center">
             <div class="card card_estudioSeleccionado  align-items-center justify-content-center">
                   <div class="row">
-                      <img src="{{ asset('images/lupa.png') }}" class="card-img-top" alt="Card Mastografia">
+                      <img src="{{ asset('images/estudio.png') }}" class="card-img-top" alt="Card Mastografia">
                   </div>
                   <div class="row mt-5">
                       <h5>Papanicolau base líquida</h5>
-                      <h6 class="mt-2"><span style="color: #484FFA">$190.00</span></h6>
+                      <h6 class="mt-2"><span style="color: #ff5733">$190.00</span></h6>
                   </div>
                   <div class="row  mt-3">
                       <a href="#" class="btn btn-sm btn-outline-secondary">Seleccionar</a>
@@ -31,11 +31,11 @@
           
               <div class="card card_estudioSeleccionado align-items-center justify-content-center">
                   <div class="row">
-                      <img src="{{ asset('images/lupa.png') }}" class="card-img-top" alt="Card Densitometria">
+                      <img src="{{ asset('images/estudio.png') }}" class="card-img-top" alt="Card Densitometria">
                   </div>
                   <div class="row mt-5">
                       <h5>VPH por PCR</h5>
-                      <h6 class="mt-2"><span style="color: #484FFA">$290.00</span></h6>
+                      <h6 class="mt-2"><span style="color: #ff5733">$290.00</span></h6>
                   </div>
                   <div class="row  mt-3">
                       <a href="#" class="btn btn-sm btn-outline-secondary">Seleccionar</a>

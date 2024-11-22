@@ -11,11 +11,11 @@ Route::get('/iniciarSesion', [ControladorVistas::class, 'iniciarSesion'])->name(
 
 // Rutas de los estudios
 Route::get('/seleccionarEstudio', [ControladorVistas::class, 'seleccionarEstudio'])->name('rutaseleccionarEstudio');
-Route::get('/estudioSeleccionadoD', [ControladorVistas::class, 'estudioSeleccionadoD'])->name('rutaestudioSeleccionadoD');
+Route::get('/estudioSeleccionadoT', [ControladorVistas::class, 'estudioSeleccionadoT'])->name('rutaestudioSeleccionadoT');
 Route::get('/estudioSeleccionadoM', [ControladorVistas::class, 'estudioSeleccionadoM'])->name('rutaestudioSeleccionadoM');
 Route::get('/estudioSeleccionadoP', [ControladorVistas::class, 'estudioSeleccionadoP'])->name('rutaestudioSeleccionadoP');
 Route::get('/estudioSeleccionadoU', [ControladorVistas::class, 'estudioSeleccionadoU'])->name('rutaestudioSeleccionadoU');
-Route::get('/estudioSeleccionadoE', [ControladorVistas::class, 'estudioSeleccionadoE'])->name('rutaestudioSeleccionadoE');
+Route::get('/estudioSeleccionadoC', [ControladorVistas::class, 'estudioSeleccionadoC'])->name('rutaestudioSeleccionadoC');
 
 
 // Ruta del botón "Próximas Citas"

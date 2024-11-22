@@ -20,15 +20,16 @@
         <meta name="description" content="Clínica Médica _ Proyecto UPQ">
 
         <!-- Color de la página web -->
-        <meta name="theme-color" content="#6285C4">
+        <meta name="theme-color" content="#ff5733">
+
         
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="{{ asset('Logo1.ico') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('Logo2.ico') }}">
 
         <!-- OPEN GRAPH! -->
         <meta property="og:title" content="Clínica Médica">
         <meta property="og:description" content="El consultorio suele contar con equipamiento básico para la evaluación clínica y acceso a tecnologías más avanzadas, como estudios de imagen, laboratorio y tratamientos especializados.">
-        <meta property="og:image" content="{{ asset('images/Logo1.jpeg') }}">
+        <meta property="og:image" content="{{ asset('images/Logo2.png') }}">
         <meta property="og:image/alt" content="Logo Clínica Médica">
 
         {{-- Llamar a CSS --}}
@@ -53,7 +54,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light" id="NavBar">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">
-                    <a href="{{route('rutaInicio')}}"><img src="{{ asset('images/Logo1.jpeg') }}" alt="Logo - Clínica Médica" width="40" height="40"></a>
+                    <a href="{{route('rutaInicio')}}"><img src="{{ asset('images/Logo2.png') }}" alt="Logo - Clínica Médica" width="40" height="40"></a>
                   </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -68,6 +69,9 @@
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#Testimonios">Testimonios</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#ReferenciasNacionales">Organizaciones</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#SobreNosotros">Conócenos</a>
@@ -91,7 +95,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-8">
-                        <img src="{{asset('images/Logo1.jpeg')}}" alt="Logo Clínica Médica" width="40" height="40">
+                        <img src="{{asset('images/Logo2.png')}}" alt="Logo Clínica Médica" width="40" height="40">
                         <br>
                         <br>
                         <br>
@@ -108,13 +112,15 @@
                     <div class="col-2">
                         <h5>Clínica</h5>
                         <br>
-                        <a href="#Testimonios"><h6>Testimonios</h6></a>
+                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#NuestrosEstudios"><h6>Estudios</h6></a>
                         <br>
-                        <a href="#SobreNosotros"><h6>Conócenos</h6></a>
+                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#MedicosDePrimera"><h6>Médicos</h6></a>
                         <br>
-                        <a href="#NuestrosEstudios"><h6>Estudios</h6></a>
+                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#Testimonios"><h6>Testimonios</h6></a>
                         <br>
-                        <a href="#MedicosDePrimera"><h6>Médicos</h6></a>
+                        <a href="{{ route('rutaInicio', [], false) }}#ReferenciasNacionales"><h6>Organizaciones</h6></a>
+                        <br>
+                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#SobreNosotros"><h6>Conócenos</h6></a>
                         <br>
                     </div>
                     <div class="col-2">
