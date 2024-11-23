@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControladorVistas;
 use App\Http\Controllers\usuariosController;
+use App\Http\Controllers\controladorMich;
 
 // Rutas "deafult"
 Route::get('/', [ControladorVistas::class, 'home'])->name('rutaInicio');
@@ -29,6 +30,8 @@ Route::get('/historialDeCitas', [ControladorVistas::class, 'historialDeCitas'])-
 Route::post('/iniciarSesionFormulario', [ControladorVistas::class, 'iniciarSesionFormulario'])->name('rutainiciarSesionFormulario');
 
 // Rutas de usuariosController
-Route::get('/registro/create', [usuariosController::class, 'create'])->name('rutaRegistro');
+Route::get('/registro/create', [usuariosController::class, 'create'])->name('rutaRegistro');    
 Route::post('/registro', [usuariosController::class, 'store'])->name('enviarUsuario');
 Route::get('/usuariosGuardados', [usuariosController::class, 'index'])->name('rutausuariosGuardados');
+
+Route::get('/altaMedico', [controladorMich::class, 'altaMedico'])->name('rutaaltamedico');

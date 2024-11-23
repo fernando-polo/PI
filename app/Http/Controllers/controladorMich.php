@@ -8,6 +8,6 @@ class controladorMich extends Controller
 {
     public function altaMedico()
     {
-        return view('mich.altaMedico'); 
+        return view('altaMedico'); 
     }
 }
