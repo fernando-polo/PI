@@ -62,5 +62,9 @@ Route::get('/registro/create', [usuariosController::class, 'create'])->name('rut
 Route::post('/registro', [usuariosController::class, 'store'])->name('enviarUsuario');
 Route::get('/usuariosGuardados', [usuariosController::class, 'index'])->name('rutausuariosGuardados');
 
+<<<<<<< HEAD
 Route::get('/altaMedico', [controladorMich::class, 'altaMedico'])->name('rutaaltamedico');
 >>>>>>> 2c99c7f (Cambios mich)
+=======
+require base_path('routes/mich.php');
+>>>>>>> f0905d2 (Rutas y adminMedicos)

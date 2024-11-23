@@ -3,4 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorMich;
 
-Route::get('/mich/altaMedico', [controladorMich::class, 'mich.altaMedico'])->name('rutaAltaMedico');
+// Definición de rutas
+Route::get('/mich/altaMedico', [controladorMich::class, 'altaMedico'])->name('rutaaltamedico');
+Route::get('/mich/inicioAdmin', [controladorMich::class, 'inicioAdmin'])->name('rutainicioadmin');
+
