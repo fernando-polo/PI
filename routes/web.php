@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControladorVistas;
 use App\Http\Controllers\usuariosController;
+use App\Http\Controllers\controladorMich;
 
 require base_path('routes/bris.php');
 
@@ -45,6 +46,7 @@ Route::get('/historialDeCitas', [ControladorVistas::class, 'historialDeCitas'])-
 Route::post('/iniciarSesionFormulario', [ControladorVistas::class, 'iniciarSesionFormulario'])->name('rutainiciarSesionFormulario');
 
 // Rutas de usuariosController
+<<<<<<< HEAD
     // Rutas para registrar un usuario
     Route::get('/registro/create', [usuariosController::class, 'create'])->name('rutaRegistro');
     Route::post('/registro', [usuariosController::class, 'store'])->name('enviarUsuario');
@@ -55,3 +57,10 @@ Route::post('/iniciarSesionFormulario', [ControladorVistas::class, 'iniciarSesio
 
     // Ruta para eliminar un usuario
     Route::delete('/usuarios/delete/{id}', [usuariosController::class, 'destroy'])->name('rutaeliminarUsuario');
+=======
+Route::get('/registro/create', [usuariosController::class, 'create'])->name('rutaRegistro');    
+Route::post('/registro', [usuariosController::class, 'store'])->name('enviarUsuario');
+Route::get('/usuariosGuardados', [usuariosController::class, 'index'])->name('rutausuariosGuardados');
+
+Route::get('/altaMedico', [controladorMich::class, 'altaMedico'])->name('rutaaltamedico');
+>>>>>>> 2c99c7f (Cambios mich)
