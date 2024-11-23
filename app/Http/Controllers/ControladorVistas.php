@@ -19,6 +19,12 @@ class ControladorVistas extends Controller
             return view('iniciarSesion');
         }
 
+    // Ruta iniciar sesión Admin
+        public function iniciarSesionAdmin(){
+            return view('iniciarSesionAdmin');
+        }
+
+
     
     // Rutas de los estudios
         public function seleccionarEstudio(){

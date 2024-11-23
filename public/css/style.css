@@ -196,4 +196,49 @@
             padding: 10px 20px; 
         }
 
+/* templateVAdmin.blade.php */
+        /* Contenedores de los iconos */
+        #btnIconoUsuarios{
+            border-color: #EF934D;
+            background-color: white;
+            color: #ff5733;
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+            border-radius: 12px;
+            border-width: 4px; 
+            font-weight: bold;
+            font-size: 16px;
+        }
 
+        #btnIconoUsuarios:hover{
+            transform: scale(1.05);
+        }
+
+        #btnIconoMedicos{
+            border-color: #EF934D;
+            background-color: white;
+            color: #ff5733;
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+            border-radius: 12px;
+            border-width: 4px; 
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        #btnIconoMedicos:hover{
+            transform: scale(1.05);
+        }
+
+        #btnIconoEstudios{
+            border-color: #EF934D;
+            background-color: white;
+            color: #ff5733;
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+            border-radius: 12px;
+            border-width: 4px; 
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        #btnIconoEstudios:hover{
+            transform: scale(1.05);
+        }
