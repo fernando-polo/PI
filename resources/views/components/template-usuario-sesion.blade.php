@@ -14,7 +14,7 @@
         <div class="row mt-2">
             <div class="container ">
                 <br>
-                <h1>{{$titulo1 ?? ''}} <span style="color: #484FFA">{{ $titulo2 }}</span></h1>
+                <h1>{{$titulo1 ?? ''}} <span style="color: #ff5733">{{ $titulo2 }}</span></h1>
                 {{ $contenido ?? ''}}
 
             </div>

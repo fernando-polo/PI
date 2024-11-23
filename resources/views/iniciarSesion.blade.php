@@ -12,14 +12,18 @@
         <script>
             Swal.fire({
               text: "Datos correctos",
-              icon: "success"
+              icon: "success",
+              confirmButtonText: "Aceptar",
+                customClass: {
+                    confirmButton: 'custom-confirm-button-datosValidados'
+                }
           });
         </script>
       @endsession
 
     <div class="card">
       <div class="card-header fs-5 text-center text-primary">
-        Iniciar sesión
+        <span style="color: #ff5733">Iniciar sesión</span>
       </div>
   
       <div class="card-body text-justify">
@@ -50,7 +54,7 @@
             </div>
           </div>
         </form>
-        <h5 class="mt-3" style="font-size: 12px"><a href="#"><span style="color: #484FFA">¿Olvidaste tu contraseña?</span></a></h5>
+        <h5 class="mt-3" style="font-size: 12px"><a href="#"><span style="color: #ff5733">¿Olvidaste tu contraseña?</span></a></h5>
       </div>
     </div>
   </div>
