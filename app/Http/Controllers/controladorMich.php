@@ -8,6 +8,11 @@ class controladorMich extends Controller
 {
     public function altaMedico()
     {
-        return view('altaMedico'); 
+        return view('mich.altaMedico'); 
+    }
+
+    public function inicioAdmin()
+    {
+        return view('mich.inicioAdmin');
     }
 }

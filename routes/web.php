@@ -34,4 +34,4 @@ Route::get('/registro/create', [usuariosController::class, 'create'])->name('rut
 Route::post('/registro', [usuariosController::class, 'store'])->name('enviarUsuario');
 Route::get('/usuariosGuardados', [usuariosController::class, 'index'])->name('rutausuariosGuardados');
 
-Route::get('/altaMedico', [controladorMich::class, 'altaMedico'])->name('rutaaltamedico');
+require base_path('routes/mich.php');
