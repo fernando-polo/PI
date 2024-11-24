@@ -79,6 +79,8 @@
                     </ul>
                     <div class="text-end">
                         <form class="container-fluid justify-content-end">
+                            <a href="{{route('rutainiciarSesionAdmin')}}" class="btn btn-sm btn-outline-primary">Admin</a>
+                            <a href="{{route('rutainiciarSesionMedicos')}}" class="btn btn-sm btn-outline-primary">Médicos</a>
                             <a href="{{route('rutaRegistro')}}" class="btn btn-sm btn-outline-primary">Registrarse</a>
                             <a href="{{route('rutaIniciarSesion')}}" class="btn btn-sm btn-outline-secondary">Iniciar Sesión</a>
                             

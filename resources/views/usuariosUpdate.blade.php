@@ -2,7 +2,7 @@
 
 
 
-@section('titulo', 'MedCLINIC - Registro')
+@section('titulo', 'MedCLINIC - Actualiza datos: Usuario')
 
 
 @section('contenido')
@@ -29,41 +29,42 @@
         </div>
     
         <div class="card-body text-justify">
-          <form action="{{route('enviarUsuario')}}" method="post" id="formRegistro">
+          <form action="{{route('rutaactualizarUsuario', ['id' => $usuario->id])}}" method="post" id="formRegistro">
             @csrf    
+            @method('PUT')
             <div class="mb-3">
               <label for="CURP" class="form-label">CURP: </label>
-              <input type="text" class="form-control" name="txtCURP" value="{{ old('txtCURP') }}">
+              <input type="text" class="form-control" name="txtCURP" value="{{ $usuario->curp }}" required>
               <small class="text-danger">{{ $errors->first('txtCURP') }}</small>
             </div>
             <div class="mb-3">
               <label for="Nombre" class="form-label">Nombre: </label>
-              <input type="text" class="form-control" name="txtNombre" value="{{ old('txtNombre') }}">
+              <input type="text" class="form-control" name="txtNombre" value="{{ $usuario->nombre }}" required>
               <small class="text-danger">{{ $errors->first('txtNombre') }}</small>
             </div>
             <div class="mb-3">
-              <label for="APaterno" class="form-label" >Apellido Paterno: </label>
-              <input type="text" class="form-control" name="txtAPaterno" value="{{ old('txtAPaterno') }}">
+              <label for="APaterno" class="form-label">Apellido Paterno: </label>
+              <input type="text" class="form-control" name="txtAPaterno" value="{{ $usuario->a_paterno }}" required>
               <small class="text-danger">{{ $errors->first('txtAPaterno') }}</small>
             </div>
             <div class="mb-3">
               <label for="AMaterno" class="form-label">Apellido Materno: </label>
-              <input type="text" class="form-control" name="txtAMaterno" value="{{ old('txtAMaterno') }}">
+              <input type="text" class="form-control" name="txtAMaterno" value="{{ $usuario->a_materno }}" required>
               <small class="text-danger">{{ $errors->first('txtAMaterno') }}</small>
             </div>
             <div class="mb-3">
               <label for="Correo" class="form-label">Correo: </label>
-              <input type="text" class="form-control" name="txtCorreo" value="{{ old('txtCorreo') }}">
+              <input type="text" class="form-control" name="txtCorreo" value="{{ $usuario->email }}" required>
               <small class="text-danger">{{ $errors->first('txtCorreo') }}</small>
             </div>
             <div class="mb-3">
               <label for="Contraseña" class="form-label">Contraseña: </label>
-              <input type="text" class="form-control" name="txtContraseña" value="{{ old('txtContraseña') }}" placeholder="Mínimo 8 letras, 1 mayúscula, 1 número y 1 carácter especial (@$!%*#?&)">
+              <input type="text" class="form-control" name="txtContraseña" value="{{ $usuario->password }}" required>
               <small class="text-danger">{{ $errors->first('txtContraseña') }}</small>
             </div>
             <div class="mb-3">
               <label for="Telefono" class="form-label">Número de teléfono: </label>
-              <input type="text" class="form-control" name="txtTelefono" value="{{ old('txtTelefono') }}">
+              <input type="text" class="form-control" name="txtTelefono" value="{{ $usuario->telefono }}" required>
               <small class="text-danger">{{ $errors->first('txtTelefono') }}</small>
             </div>
             <div class="card-footer text-muted">
