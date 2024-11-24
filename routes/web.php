@@ -13,6 +13,14 @@ Route::get('/iniciarSesion', [ControladorVistas::class, 'iniciarSesion'])->name(
     Route::get('/iniciarSesionAdmin', [ControladorVistas::class, 'iniciarSesionAdmin'])->name('rutainiciarSesionAdmin');
     Route::get('/vistasAdmin', [usuariosController::class, 'index'])->name('rutavistasAdmin');
 
+    // Médicos
+    Route::get('/iniciarSesionMedicos', [ControladorVistas::class, 'iniciarSesionMedicos'])->name('rutainiciarSesionMedicos');
+    Route::get('/vistasMedicos', [ControladorVistas::class, 'vistasMedicos'])->name('rutavistasMedicos');
+    Route::get('/vistasMedicosCR', [ControladorVistas::class, 'vistasMedicosCR'])->name('rutavistasMedicosCR');
+    Route::get('/vistasMedicosPC', [ControladorVistas::class, 'vistasMedicosPC'])->name('rutavistasMedicosPC');
+
+
+
 
 
 // Rutas de los estudios

@@ -65,7 +65,7 @@
         <div class="container" >
             
             <br>
-            <h1 class="text-center">Iniciar sesión - Vista Administrativa (Prototipo)</h1>
+            <h1 class="text-center">Iniciar sesión - Vista Médicos (Prototipo)</h1>
             <hr class="hr-custom">
 
       <div class="card-body text-justify">  
@@ -88,7 +88,7 @@
                 </div>
                 <div class="col">
                     <div class="d-grid gap-2 mt-2 mb-1">
-                        <a href="{{route('rutavistasAdmin')}}" class="btn btn-sm btn-outline-secondary">Iniciar sesión</a>
+                        <a href="{{route('rutavistasMedicos')}}" class="btn btn-sm btn-outline-secondary">Iniciar sesión</a>
                     </div>
                 </div>
             </div>

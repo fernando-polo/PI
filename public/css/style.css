@@ -196,8 +196,8 @@
             padding: 10px 20px; 
         }
 
-/* templateVAdmin.blade.php */
-        /* Contenedores de los iconos */
+/* vistasAdmin.blade.php */
+        /* botones - iconos */
         #btnIconoUsuarios{
             border-color: #EF934D;
             background-color: white;
@@ -240,5 +240,52 @@
         }
 
         #btnIconoEstudios:hover{
+            transform: scale(1.05);
+        }
+
+/* vistasMedicos.blade.php */
+        /* botones - iconos */
+        #btnIconoCalendario{
+            border-color: #EF934D;
+            background-color: white;
+            color: #ff5733;
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+            border-radius: 12px;
+            border-width: 4px; 
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        #btnIconoCalendario:hover{
+            transform: scale(1.05);
+        }
+
+        #btnIconoCitasProximas{
+            border-color: #EF934D;
+            background-color: white;
+            color: #ff5733;
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+            border-radius: 12px;
+            border-width: 4px; 
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        #btnIconoCitasProximas:hover{
+            transform: scale(1.05);
+        }
+
+        #btnIconoCitasRealizadas{
+            border-color: #EF934D;
+            background-color: white;
+            color: #ff5733;
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+            border-radius: 12px;
+            border-width: 4px; 
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        #btnIconoCitasRealizadas:hover{
             transform: scale(1.05);
         }
