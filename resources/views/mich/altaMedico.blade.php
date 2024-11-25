@@ -1,66 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-    <div container>
-    <center>
-    <div class="max-w-lg mx-auto  bg-white dark:bg-gray-800 rounded-lg shadow-md px-8 py-10 flex flex-col items-center">
-        <h1 class="text-xl font-bold text-center text-gray-700 dark:text-gray-200 mb-8">Registro de Medicos</h1>
-        <form action="#" class="w-full flex flex-col gap-4">
-            @csrf
-        <div class="flex items-start flex-col justify-start">
-            <label for="cprofesional" class="text-sm text-gray-700 dark:text-gray-200 mr-2">Cedula profesional:</label>
-            <input type="text" id="cprofesional" name="cprofesional" class="w-full px-3 dark:text-gray-200 dark:bg-gray-900 py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500">
+
+    @extends('layouts.templateVAdmin')
+    @section('altaMedico')
+
+
+    @section('titulo', 'MedCLINIC Registro de usuarios')
+
+
+        <div class="card">
+            <div class="card-header fs-5 text-center text-primary">
+            <span style="color: #ff5733">¡Registra un nuevo Medico!</span>
+            </div>
+        
+            <div class="card-body text-justify">
+            <form action="" method="post" id="formRegistro">
+                @csrf    
+                <div class="mb-3">
+                <label for="cprofesional" class="form-label">Cedula profesional: </label>
+                <input type="text" class="form-control" name="cprofesional" value="#">
+                <small class="text-danger">{{ $errors->first('cprofesional') }}</small>
+                </div>
+                <div class="mb-3">
+                <label for="cespacialidad" class="form-label">Cedula Especialidad: </label>
+                <input type="text" class="form-control" name="cespacialidad" value="#">
+                <small class="text-danger">{{ $errors->first('cespacialidad') }}</small>
+                </div>
+                <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre: </label>
+                <input type="text" class="form-control" name="nombre" value="#">
+                <small class="text-danger">{{ $errors->first('nombre') }}</small>
+                </div>
+                <div class="mb-3">
+                <label for="apaterno" class="form-label">Apellido Paterno: </label>
+                <input type="text" class="form-control" name="apaterno" value="#">
+                <small class="text-danger">{{ $errors->first('apaterno') }}</small>
+                </div>
+                <div class="mb-3">
+                <label for="amaterno" class="form-label">Apellido Materno: </label>
+                <input type="text" class="form-control" name="amaterno" value="#">
+                <small class="text-danger">{{ $errors->first('amaterno') }}</small>
+                </div>
+                <div class="mb-3">
+                <label for="telefono" class="form-label">Numero Telefonico: </label>
+                <input type="text" class="form-control" name="telefono" value="#">
+                <small class="text-danger">{{ $errors->first('telefono') }}</small>
+                </div>
+                <div class="mb-3">
+                <label for="correo" class="form-label">Correo: </label>
+                <input type="text" class="form-control" name="correo" value="#">
+                <small class="text-danger">{{ $errors->first('correo') }}</small>
+                </div>
+                <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña: </label>
+                <input type="text" class="form-control" name="contrasena" value="#">
+                <small class="text-danger">{{ $errors->first('contrasena') }}</small>
+                </div>
+                <div class="card-footer text-muted">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-grid gap-2 mt-2 mb-1">
+                            <button type="button" class="btn btn-sm btn-outline-primary" onclick="document.getElementById('formRegistro').reset();">Limpiar</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="d-grid gap-2 mt-2 mb-1">
+                            <button type="submit" class="btn btn-sm btn-outline-secondary">Guardar datos</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </form>
+            </div>
         </div>
 
-        <div class="flex items-start flex-col justify-start">
-            <label for="cespacialidad" class="text-sm text-gray-700 dark:text-gray-200 mr-2">Cedula Especialidad:</label>
-            <input type="text" id="cespacialidad" name="cespacialidad" class="w-full px-3 dark:text-gray-200 dark:bg-gray-900 py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500">
         </div>
-
-        <div class="flex items-start flex-col justify-start">
-            <label for="nombre" class="text-sm text-gray-700 dark:text-gray-200 mr-2">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" class="w-full px-3 dark:text-gray-200 dark:bg-gray-900 py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500">
-        </div>
-
-        <div class="flex items-start flex-col justify-start">
-            <label for="apaterno" class="text-sm text-gray-700 dark:text-gray-200 mr-2">Apellido Paterno:</label>
-            <input type="text" id="apaterno" name="apaterno" class="w-full px-3 dark:text-gray-200 dark:bg-gray-900 py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500">
-        </div>
-
-        <div class="flex items-start flex-col justify-start">
-            <label for="amaterno" class="text-sm text-gray-700 dark:text-gray-200 mr-2">Apellido Materno:</label>
-            <input type="text" id="amaterno" name="amaterno" class="w-full px-3 dark:text-gray-200 dark:bg-gray-900 py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500">
-        </div>
-
-        <div class="flex items-start flex-col justify-start">
-            <label for="correo" class="text-sm text-gray-700 dark:text-gray-200 mr-2">Correo:</label>
-            <input type="email" id="correo" name="correo" class="w-full px-3 dark:text-gray-200 dark:bg-gray-900 py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500">
-        </div>
-
-        <div class="flex items-start flex-col justify-start">
-            <label for="contrasena" class="text-sm text-gray-700 dark:text-gray-200 mr-2">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" class="w-full px-3 dark:text-gray-200 dark:bg-gray-900 py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500">
-        </div>
-
-        <div class="flex items-start flex-col justify-start">
-            <label for="telefono" class="text-sm text-gray-700 dark:text-gray-200 mr-2">Telefono:</label>
-            <input type="text" id="telefono" name="telefono" class="w-full px-3 dark:text-gray-200 dark:bg-gray-900 py-2 rounded-md border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500">
-        </div>
-
-        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md shadow-sm">Registrar</button>
-        </form>
-
-        </form>
-    </div>
-</center>
-
-</div> <!--Cierra contenerdor-->
-</body>
-</html>
+    </section>
+    @endsection
 
