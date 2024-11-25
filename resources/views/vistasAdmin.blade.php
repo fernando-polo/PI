@@ -10,7 +10,7 @@
 @endsection
 
 @section('btn2')
-    <a href="#" id="btnIconoMedicos" class="btn btn-outline-primary">
+    <a href="{{route('rutaaltamedico')}}" id="btnIconoMedicos" class="btn btn-outline-primary">
         <i class="bi bi-hospital-fill"></i>
         Médicos
     </a>

@@ -106,6 +106,7 @@
                 <div class="col">
                     {{-- Aquí se imprimiran los registros que ustedes hagan en sus formularios --}}
                     @yield('contenidoRegistros')
+                    @yield('altaMedico')
                 </div>
             </div>
         </div>
