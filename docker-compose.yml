@@ -3,6 +3,7 @@ services:
   app:
     build:
       context: .
+      dockerfile: dockerfile  
     ports:
       - "8000:80"
     volumes:
