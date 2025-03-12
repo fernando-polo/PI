@@ -8,15 +8,17 @@ services:
       - "8000:80"
     volumes:
       - .:/var/www/html
+    networks:
+      -laravel_network
     depends_on:
       - db
   db:
     image: mysql:8.0.33
     environment:
-      MYSQL_DATABASE: oncocheck
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: PI
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 
+      MYSQL_ROOT_PASSWORD:
     ports:
       - "3306:3306"
     volumes:
