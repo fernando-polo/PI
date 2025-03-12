@@ -19,6 +19,32 @@ class ControladorVistas extends Controller
             return view('iniciarSesion');
         }
 
+    // Ruta iniciar sesión Admin
+        public function iniciarSesionAdmin(){
+            return view('iniciarSesionAdmin');
+        }
+
+    // Rutas para médicos
+
+        // Ruta iniciar sesión Médicos
+            public function iniciarSesionMedicos(){
+                return view('iniciarSesionMedicos');
+            }
+
+        // Rutas de las vistas
+            public function vistasMedicos(){
+                return view('vistasMedicos');
+            }
+
+            public function vistasMedicosPC(){
+                return view('vistasMedicosPC');
+            }
+    
+
+            public function vistasMedicosCR(){
+                return view('vistasMedicosCR');
+            }
+    
     
     // Rutas de los estudios
         public function seleccionarEstudio(){
