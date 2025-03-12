@@ -16,9 +16,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('especialidad');
             $table->string('requisitos');
-            $table->string('genero');
             $table->string('precio');
-            $table->string('paquete');
             $table->timestamps();
         });
     }
