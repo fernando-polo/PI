@@ -1,0 +1,38 @@
+# Dockerfile para Laravel + Python
+FROM php:8.1-fpm
+
+# Instalar dependencias del sistema
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    libonig-dev \
+    libzip-dev \
+    zip \
+    unzip
+
+# Instalar dependencias de Python
+COPY requirements.txt /app/
+RUN pip3 install -r /app/requirements.txt
+
+# Instalar Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+# Configurar directorio de la aplicación
+WORKDIR /var/www
+
+# Copiar archivos del proyecto
+COPY . .
+
+# Instalar dependencias de PHP
+RUN composer install
+
+# Establecer permisos
+RUN chown -R www-data:www-data /var/www
+RUN chmod -R 755 /var/www
+
+# Exponer puerto 9000 y ejecutar PHP-FPM
+EXPOSE 9000
+CMD ["php-fpm"]
