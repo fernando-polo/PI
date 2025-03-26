@@ -27,12 +27,12 @@
 
         
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="{{ asset('Logo2.ico') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('OncoCheck.ico') }}">
 
         <!-- OPEN GRAPH! -->
         <meta property="og:title" content="Clínica Médica">
         <meta property="og:description" content="El consultorio suele contar con equipamiento básico para la evaluación clínica y acceso a tecnologías más avanzadas, como estudios de imagen, laboratorio y tratamientos especializados.">
-        <meta property="og:image" content="{{ asset('images/Logo2.png') }}">
+        <meta property="og:image" content="{{ asset('images/OncoCheck.jpeg') }}">
         <meta property="og:image/alt" content="Logo Clínica Médica">
 
         {{-- Llamar a CSS --}}
@@ -58,7 +58,7 @@
                 <div class="container-fluid">
                     <div class="row mt-2 mb-2">
                         <div class="col text-left">
-                            <a href="{{route('rutaInicio')}}"><img src="{{ asset('images/Logo2.png') }}" alt="Logo - Clínica Médica" width="40" height="40"></a>
+                            <a href="{{route('rutaInicio')}}"><img src="{{ asset('images/OncoCheck.jpeg') }}" alt="Logo - Clínica Médica" width="40" height="40"></a>
                         </div>
                     </div>
                 </div>

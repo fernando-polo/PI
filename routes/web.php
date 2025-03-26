@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControladorVistas;
 use App\Http\Controllers\usuariosController;
-use App\Http\Controllers\controladorMich;
+use App\Http\Controllers\CitaController;
 
 require base_path('routes/bris.php');
 
@@ -12,15 +12,15 @@ Route::get('/', [ControladorVistas::class, 'home'])->name('rutaInicio');
 Route::get('/iniciarSesion', [ControladorVistas::class, 'iniciarSesion'])->name('rutaIniciarSesion');
 
 // Rutas botones para las vistas de Administrativas y Médico
-    // Administrativas
-    Route::get('/iniciarSesionAdmin', [ControladorVistas::class, 'iniciarSesionAdmin'])->name('rutainiciarSesionAdmin');
-    Route::get('/vistasAdmin', [usuariosController::class, 'index'])->name('rutavistasAdmin');
+// Administrativas
+Route::get('/iniciarSesionAdmin', [ControladorVistas::class, 'iniciarSesionAdmin'])->name('rutainiciarSesionAdmin');
+Route::get('/vistasAdmin', [usuariosController::class, 'index'])->name('rutavistasAdmin');
 
-    // Médicos
-    Route::get('/iniciarSesionMedicos', [ControladorVistas::class, 'iniciarSesionMedicos'])->name('rutainiciarSesionMedicos');
-    Route::get('/vistasMedicos', [ControladorVistas::class, 'vistasMedicos'])->name('rutavistasMedicos');
-    Route::get('/vistasMedicosCR', [ControladorVistas::class, 'vistasMedicosCR'])->name('rutavistasMedicosCR');
-    Route::get('/vistasMedicosPC', [ControladorVistas::class, 'vistasMedicosPC'])->name('rutavistasMedicosPC');
+// Médicos
+Route::get('/iniciarSesionMedicos', [ControladorVistas::class, 'iniciarSesionMedicos'])->name('rutainiciarSesionMedicos');
+Route::get('/vistasMedicos', [ControladorVistas::class, 'vistasMedicos'])->name('rutavistasMedicos');
+Route::get('/vistasMedicosCR', [ControladorVistas::class, 'vistasMedicosCR'])->name('rutavistasMedicosCR');
+Route::get('/vistasMedicosPC', [ControladorVistas::class, 'vistasMedicosPC'])->name('rutavistasMedicosPC');
 
 
 
@@ -46,18 +46,19 @@ Route::get('/historialDeCitas', [ControladorVistas::class, 'historialDeCitas'])-
 Route::post('/iniciarSesionFormulario', [ControladorVistas::class, 'iniciarSesionFormulario'])->name('rutainiciarSesionFormulario');
 
 // Rutas de usuariosController
-Route::get('/registro/create', [usuariosController::class, 'create'])->name('rutaRegistro');    
+Route::get('/registro/create', [usuariosController::class, 'create'])->name('rutaRegistro');
 Route::post('/registro', [usuariosController::class, 'store'])->name('enviarUsuario');
 Route::get('/usuariosGuardados', [usuariosController::class, 'index'])->name('rutausuariosGuardados');
-    // Rutas para registrar un usuario
-    Route::get('/registro/create', [usuariosController::class, 'create'])->name('rutaRegistro');
-    Route::post('/registro', [usuariosController::class, 'store'])->name('enviarUsuario');
+// Rutas para registrar un usuario
+Route::get('/registro/create', [usuariosController::class, 'create'])->name('rutaRegistro');
+Route::post('/registro', [usuariosController::class, 'store'])->name('enviarUsuario');
 
-    // Rutas para editar un usuario
-    Route::get('/usuarios/update/{id}', [usuariosController::class, 'edit'])->name('rutausuariosUpdate');
-    Route::put('/usuarios/{id}/update', [usuariosController::class, 'update'])->name('rutaactualizarUsuario');
+// Rutas para editar un usuario
+Route::get('/usuarios/update/{id}', [usuariosController::class, 'edit'])->name('rutausuariosUpdate');
+Route::put('/usuarios/{id}/update', [usuariosController::class, 'update'])->name('rutaactualizarUsuario');
 
-    // Ruta para eliminar un usuario
-    Route::delete('/usuarios/delete/{id}', [usuariosController::class, 'destroy'])->name('rutaeliminarUsuario');
+// Ruta para eliminar un usuario
+Route::delete('/usuarios/delete/{id}', [usuariosController::class, 'destroy'])->name('rutaeliminarUsuario');
 
-require base_path('routes/mich.php');
+// Ruta API
+Route::get('/enviar-correo', [CitaController::class, 'enviarCorreoCita']);
