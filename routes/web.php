@@ -7,6 +7,8 @@ use App\Http\Controllers\controladorMich;
 
 require base_path('routes/bris.php');
 
+require base_path('routes/bris.php');
+
 // Rutas "deafult"
 Route::get('/', [ControladorVistas::class, 'home'])->name('rutaInicio');
 Route::get('/iniciarSesion', [ControladorVistas::class, 'iniciarSesion'])->name('rutaIniciarSesion');

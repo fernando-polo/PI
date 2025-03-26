@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorEstudios;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Password;
 
 // Rutas para restablecimiento de contraseña
@@ -14,10 +15,15 @@ Route::get('/cambiar-contrasena', function () {
 })->name('password.reset');
 
 // Rutas principales existentes
+=======
+
+
+>>>>>>> 0fbc6ca (ignorar)
 Route::get('/estudios', [controladorEstudios::class, 'index'])->name('rutaEstudiosGuardados');
 Route::get('/estudios/crear', [controladorEstudios::class, 'create'])->name('rutaFormularioEstudios');
 Route::post('/estudios/guardar', [controladorEstudios::class, 'store'])->name('rutaGuardarEstudios');
 
+<<<<<<< HEAD
 // Ruta para el login médico (con subcarpeta briss)
 Route::get('/medico/login', function() {
     return view('briss.loginMedico'); // Vista en subcarpeta briss
@@ -42,3 +48,9 @@ Route::get('/medico/citas', function() {
 Route::get('/medico/disponibilidad', function() {
     return view('briss.disponibilidadMedico'); // Vista en subcarpeta briss
 })->name('disponibilidad');
+=======
+//Route::get('/registroEstudio/create', [controladorEstudios::class, 'create'])->name('rutaEstudiosGuardados');
+//Route::post('/registroEstudio', [controladorEstudios::class, 'store'])->name('rutaFormularioEstudios');
+//Route::get('/estudiosGuardados', [controladorEstudios::class, 'index'])->name('rutaFormularioEstudios');
+
+>>>>>>> 0fbc6ca (ignorar)
