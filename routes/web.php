@@ -3,9 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControladorVistas;
 use App\Http\Controllers\usuariosController;
+<<<<<<< HEAD
 use App\Http\Controllers\controladorMich;
 
 require base_path('routes/bris.php');
+=======
+use App\Http\Controllers\CitaController;
+>>>>>>> 80dbdca (API y cambios estéticos)
 
 require base_path('routes/bris.php');
 
@@ -59,6 +63,7 @@ Route::post('/iniciarSesionFormulario', [ControladorVistas::class, 'iniciarSesio
 
     // Ruta para eliminar un usuario
     Route::delete('/usuarios/delete/{id}', [usuariosController::class, 'destroy'])->name('rutaeliminarUsuario');
+<<<<<<< HEAD
 =======
 Route::get('/registro/create', [usuariosController::class, 'create'])->name('rutaRegistro');    
 Route::post('/registro', [usuariosController::class, 'store'])->name('enviarUsuario');
@@ -70,3 +75,8 @@ Route::get('/altaMedico', [controladorMich::class, 'altaMedico'])->name('rutaalt
 =======
 require base_path('routes/mich.php');
 >>>>>>> f0905d2 (Rutas y adminMedicos)
+=======
+
+// Ruta API
+Route::get('/enviar-correo', [CitaController::class, 'enviarCorreoCita']);    
+>>>>>>> 80dbdca (API y cambios estéticos)
