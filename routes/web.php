@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ControladorVistas;
 use App\Http\Controllers\usuariosController;
+use App\Http\Controllers\CitaController;
 
 require base_path('routes/bris.php');
 
@@ -55,3 +56,6 @@ Route::post('/iniciarSesionFormulario', [ControladorVistas::class, 'iniciarSesio
 
     // Ruta para eliminar un usuario
     Route::delete('/usuarios/delete/{id}', [usuariosController::class, 'destroy'])->name('rutaeliminarUsuario');
+
+// Ruta API
+Route::get('/enviar-correo', [CitaController::class, 'enviarCorreoCita']);    

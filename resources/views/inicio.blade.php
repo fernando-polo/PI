@@ -17,9 +17,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 text-start">
-                    <h1 class="titulo"><strong>La detección temprana <span style="color: #ff5733">salva vidas</span></strong></h1>
-                    <p style="font-size: 20px">Algunos de los cánceres más comunes son <span style="color: #ff5733;">curables</span> si se detectan a tiempo, 
-                        <span style="color: #ff5733">nosotros te ayudamos.</span></p>        
+                    <h1 class="titulo"><strong>La detección temprana te puede <span style="color: #711BA4">salvar la vida</span></strong></h1>
+                    <p style="font-size: 20px">Algunos de los cánceres más comunes son <span style="color: #8F7ada;">curables</span> si se detectan a tiempo, 
+                        <span style="color: #8F7ada">nosotros te ayudamos.</span></p>        
                         <br>
                     <div class="text-start">
                         <form>
@@ -45,10 +45,10 @@
     <div class="container text-center">
         <br>
         <br>
-        <h5><span style="color: #ff5733; font-size: 32px; font-weight: bold;"><strong>Prevención, Detección y Tratamiento Oportuno</strong></span></h5>
-        <h5 style="font-size: 68px; font-weight: bold;"><strong>Nuestros <span style="color: #EF934D;">estudios</strong></span></h5>
+        <h5><span style="color: #711BA4; font-size: 32px; font-weight: bold;"><strong>Prevención, Detección y Tratamiento Oportuno</strong></span></h5>
+        <h5 style="font-size: 68px; font-weight: bold;"><strong>Nuestros <span style="color: #8F7ada;">estudios</strong></span></h5>
         <hr class="hr-custom text-center">
-        <p style="font-size: 20px; font-weight: bold;">Nuestra <span style="color: #ff5733">clínica médica</span> te ofrece los <span style="color: #ff5733">análisis de salud</span> que necesitas y el apoyo que mereces.</p>
+        <p style="font-size: 20px; font-weight: bold;">Nuestra <span style="color: #711BA4">clínica médica</span> te ofrece los <span style="color: #711BA4">análisis de salud</span> que necesitas y el apoyo que mereces.</p>
 
         {{-- Cards --}}
         <div class="container ">
@@ -117,37 +117,37 @@
   <br>
   <br>
   <div class="container text-center">
-    <h5><span style="color: #ff5733; font-size: 32px; font-weight: bold;"><strong>Seguridad y bienestar</strong></span></h5>
-    <h5 style="font-size: 68px; font-weight: bold;"><strong><span style="color: #EF934D;"> Médicos</span> de primera</strong></h5>
+    <h5><span style="color: #711BA4; font-size: 32px; font-weight: bold;"><strong>Seguridad y bienestar</strong></span></h5>
+    <h5 style="font-size: 68px; font-weight: bold;"><strong><span style="color: #8F7ada;"> Médicos</span> de primera</strong></h5>
     <hr class="hr-custom text-center">
-    <p style="font-size: 20px; font-weight: bold;">Con más de <span style="color: #ff5733">20 años de experiencia,</span> nuestros <span style="color: #ff5733">médicos</span> están comprometidos con el bienestar de tu familia.</p>
+    <p style="font-size: 20px; font-weight: bold;">Con más de <span style="color: #711BA4">20 años de experiencia,</span> nuestros <span style="color: #8F7ada">médicos</span> están comprometidos con el bienestar de tu familia.</p>
     <br>
 
     <div class="row">
       <div class="col-sm-4 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><span style="color: #ff5733; font-size: 20px; font-weight: bold;">Dr. Myrna Maldonado</span></h5>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">Especialidad</span><p>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">No. de Cédula</span></p>
+            <h5 class="card-title"><span style="color: #711BA4; font-size: 20px; font-weight: bold;">Dr. Myrna Maldonado</span></h5>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">Especialidad</span><p>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">No. de Cédula</span></p>
           </div>
         </div>
       </div>
       <div class="col-sm-4 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><span style="color: #ff5733; font-size: 20px; font-weight: bold;">Dr. Myrna Maldonado</span></h5>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">Especialidad</span><p>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">No. de Cédula</span></p>
+            <h5 class="card-title"><span style="color: #711BA4; font-size: 20px; font-weight: bold;">Dr. Myrna Maldonado</span></h5>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">Especialidad</span><p>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">No. de Cédula</span></p>
           </div>
         </div>
       </div>
       <div class="col-sm-4 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><span style="color: #ff5733; font-size: 20px; font-weight: bold;">Dr. Myrna Maldonado</span></h5>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">Especialidad</span><p>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">No. de Cédula</span></p>
+            <h5 class="card-title"><span style="color: #711BA4; font-size: 20px; font-weight: bold;">Dr. Myrna Maldonado</span></h5>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">Especialidad</span><p>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">No. de Cédula</span></p>
           </div>
         </div>
       </div>
@@ -157,27 +157,27 @@
       <div class="col-sm-4 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><span style="color: #ff5733; font-size: 20px; font-weight: bold;">Dr. Myrna Maldonado</span></h5>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">Especialidad</span><p>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">No. de Cédula</span></p>
+            <h5 class="card-title"><span style="color: #711BA4; font-size: 20px; font-weight: bold;">Dr. Myrna Maldonado</span></h5>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">Especialidad</span><p>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">No. de Cédula</span></p>
           </div>
         </div>
       </div>
       <div class="col-sm-4 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><span style="color: #ff5733; font-size: 20px; font-weight: bold;">Dr. Myrna Maldonado</span></h5>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">Especialidad</span><p>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">No. de Cédula</span></p>
+            <h5 class="card-title"><span style="color: #711BA4; font-size: 20px; font-weight: bold;">Dr. Myrna Maldonado</span></h5>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">Especialidad</span><p>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">No. de Cédula</span></p>
           </div>
         </div>
       </div>
       <div class="col-sm-4 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><span style="color: #ff5733; font-size: 20px; font-weight: bold;">Dr. Myrna Maldonado</span></h5>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">Especialidad</span><p>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">No. de Cédula</span></p>
+            <h5 class="card-title"><span style="color: #711BA4; font-size: 20px; font-weight: bold;">Dr. Myrna Maldonado</span></h5>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">Especialidad</span><p>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">No. de Cédula</span></p>
           </div>
         </div>
       </div>
@@ -192,18 +192,18 @@
   <br>
   <br>
   <div class="container text-center">
-    <h5><span style="color: #ff5733; font-size: 32px; font-weight: bold;"><strong>Sinceridad ante todo</strong></span></h5>
-    <h5 style="font-size: 68px; font-weight: bold;"><strong>Tu<span style="color: #EF934D;"> Testimonio</span> importa</strong></h5>
+    <h5><span style="color: #711BA4; font-size: 32px; font-weight: bold;"><strong>Sinceridad ante todo</strong></span></h5>
+    <h5 style="font-size: 68px; font-weight: bold;"><strong>Tu<span style="color: #8F7ada;"> Testimonio</span> importa</strong></h5>
     <hr class="hr-custom text-center">
-    <p style="font-size: 20px; font-weight: bold;"><span style="color: #ff5733">Cuidamos de ti y de los tuyos</span>. Los testimonios confirman nuestro compromiso.</p>
+    <p style="font-size: 20px; font-weight: bold;"><span style="color: #711BA4">Cuidamos de ti y de los tuyos</span>. Los testimonios confirman nuestro compromiso.</p>
     <br>
 
     <div class="row">
       <div class="col-sm-4 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><span style="color: #ff5733; font-size: 20px; font-weight: bold;">Nombre - Usuario</span></h5>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">'@ Usuario'</span><p>
+            <h5 class="card-title"><span style="color: #711BA4; font-size: 20px; font-weight: bold;">Nombre - Usuario</span></h5>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">'@ Usuario'</span><p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           </div>
         </div>
@@ -211,8 +211,8 @@
       <div class="col-sm-4 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><span style="color: #ff5733; font-size: 20px; font-weight: bold;">Nombre - Usuario</span></h5>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">'@ Usuario'</span><p>
+            <h5 class="card-title"><span style="color: #711BA4; font-size: 20px; font-weight: bold;">Nombre - Usuario</span></h5>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">'@ Usuario'</span><p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           </div>
         </div>
@@ -220,8 +220,8 @@
       <div class="col-sm-4 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><span style="color: #ff5733; font-size: 20px; font-weight: bold;">Nombre - Usuario</span></h5>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">'@ Usuario'</span><p>
+            <h5 class="card-title"><span style="color: #711BA4; font-size: 20px; font-weight: bold;">Nombre - Usuario</span></h5>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">'@ Usuario'</span><p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           </div>
         </div>
@@ -232,8 +232,8 @@
       <div class="col-sm-4 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><span style="color: #ff5733; font-size: 20px; font-weight: bold;">Nombre - Usuario</span></h5>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">'@ Usuario'</span><p>
+            <h5 class="card-title"><span style="color: #711BA4; font-size: 20px; font-weight: bold;">Nombre - Usuario</span></h5>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">'@ Usuario'</span><p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           </div>
         </div>
@@ -241,8 +241,8 @@
       <div class="col-sm-4 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><span style="color: #ff5733; font-size: 20px; font-weight: bold;">Nombre - Usuario</span></h5>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">'@ Usuario'</span><p>
+            <h5 class="card-title"><span style="color: #711BA4; font-size: 20px; font-weight: bold;">Nombre - Usuario</span></h5>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">'@ Usuario'</span><p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           </div>
         </div>
@@ -250,8 +250,8 @@
       <div class="col-sm-4 mb-3 mb-sm-0">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><span style="color: #ff5733; font-size: 20px; font-weight: bold;">Nombre - Usuario</span></h5>
-            <p class="card-text"><span style="color: #EF934D; font-size: 16px; font-weight: bold;">'@ Usuario'</span><p>
+            <h5 class="card-title"><span style="color: #711BA4; font-size: 20px; font-weight: bold;">Nombre - Usuario</span></h5>
+            <p class="card-text"><span style="color: #8F7ada; font-size: 16px; font-weight: bold;">'@ Usuario'</span><p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           </div>
         </div>
@@ -267,11 +267,11 @@
   <br>
   <br>
   <div class="container text-center">
-    <h5><span style="color: #ff5733; font-size: 32px; font-weight: bold;"><strong>Colaboración nacional</strong></span></h5>
-    <h5 style="font-size: 68px; font-weight: bold;"><strong>Organizaciones<span style="color: #EF934D;"> Mexicanas</span></strong></h5>
+    <h5><span style="color: #711BA4; font-size: 32px; font-weight: bold;"><strong>Colaboración nacional</strong></span></h5>
+    <h5 style="font-size: 68px; font-weight: bold;"><strong>Organizaciones<span style="color: #8F7ada;"> Mexicanas</span></strong></h5>
     <hr class="hr-custom text-center">
     <p style="font-size: 20px; font-weight: bold;">
-      En México, diversas organizaciones <span style="color: #ff5733;">trabajan incansablemente</span> para prevenir, tratar y apoyar a quienes enfrentan el cáncer. Descubre cómo pueden ayudarte o cómo puedes contribuir.
+      En México, diversas organizaciones <span style="color: #711BA4;">trabajan incansablemente</span> para prevenir, tratar y apoyar a quienes enfrentan el cáncer. Descubre cómo pueden ayudarte o cómo puedes contribuir.
     </p>
 
     <br>
@@ -282,7 +282,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">
-              <span style="color: #ff5733; font-size: 20px; font-weight: bold;">FUCAM</span>
+              <span style="color: #711BA4; font-size: 20px; font-weight: bold;">FUCAM</span>
             </h5>
             <p class="card-text">
               Fundación especializada en la detección y tratamiento del cáncer de mama en mujeres mexicanas.
@@ -298,7 +298,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">
-              <span style="color: #ff5733; font-size: 20px; font-weight: bold;">Casa de la amistad</span>
+              <span style="color: #711BA4; font-size: 20px; font-weight: bold;">Casa de la amistad</span>
             </h5>
             <p class="card-text">
               Asociación dedicada a brindar apoyo integral a niños con cáncer y sus familias.
@@ -314,7 +314,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">
-              <span style="color: #ff5733; font-size: 20px; font-weight: bold;">AMLCC</span>
+              <span style="color: #711BA4; font-size: 20px; font-weight: bold;">AMLCC</span>
             </h5>
             <p class="card-text">
               Instituto Nacional de Cancerología, líder en investigación, tratamiento y prevención del cáncer en México.
@@ -339,16 +339,16 @@
   <br>
   <br>
   <div class="container text-center">
-    <h5><span style="color: #ff5733; font-size: 32px; font-weight: bold;"><strong>Nuestra historia como institución</strong></span></h5>
-    <h5 style="font-size: 68px; font-weight: bold;"><strong>Sobre <span style="color: #EF934D;">Nosotros</span></strong></h5>
+    <h5><span style="color: #711BA4; font-size: 32px; font-weight: bold;"><strong>Nuestra historia como institución</strong></span></h5>
+    <h5 style="font-size: 68px; font-weight: bold;"><strong>Sobre <span style="color: #8F7ada;">Nosotros</span></strong></h5>
     <hr class="hr-custom text-center">
     <div class="row align-items-center">
       <div class="col">
         <br>
-        <p class="text-start"> <span style="color: #ff5733; font-size: 16px; font-weight: bold;">La Clínica MedCLINIC</span> es un centro de atención integral que ofrece una amplia gama de servicios médicos en cuanto a la detección de cáncer a termpana edad. Con un equipo de profesionales altamente capacitados, modernas instalaciones y tecnología de vanguardia granatizamos a mejor experiencia y bienestar de sus pacientes. La Clínica MedCLINIC se compromete a proporcionar un servicio humano y accesible, brindando seguridad y confianza en cada consulta.</p>
+        <p class="text-start"> <span style="color: #711BA4; font-size: 16px; font-weight: bold;">La Clínica MedCLINIC</span> es un centro de atención integral que ofrece una amplia gama de servicios médicos en cuanto a la detección de cáncer a termpana edad. Con un equipo de profesionales altamente capacitados, modernas instalaciones y tecnología de vanguardia granatizamos a mejor experiencia y bienestar de sus pacientes. La Clínica MedCLINIC se compromete a proporcionar un servicio humano y accesible, brindando seguridad y confianza en cada consulta.</p>
       </div>
       <div class="col">
-        <img src="{{ asset('images/Logo2.png') }}" alt="Logo - Clínica Médica" class="img-fluid text-start" style="max-width: 100%; height: auto; max-height: 400px;">
+        <img src="{{ asset('images/OncoCheck.jpeg') }}" alt="Logo - Clínica Médica" class="img-fluid text-start" style="max-width: 100%; height: auto; max-height: 400px;">
       </div>
     </div>
   </div>
