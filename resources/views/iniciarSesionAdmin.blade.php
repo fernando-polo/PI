@@ -22,6 +22,9 @@
         <!-- Color de la página web -->
         <meta name="theme-color" content="#ff5733">
 
+        <!-- Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
         
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="{{ asset('Logo2.ico') }}">
@@ -47,10 +50,9 @@
         {{-- Llamar a bootstrap --}}
         @vite('resources/js/app.js')
 
-
-
     </head>
     <body>
+
         <header> 
             <nav>            
                 <div class="container-fluid">
@@ -62,40 +64,34 @@
                 </div>
             </nav>  
         </header>
-        <div class="container" >
-            
+        <div class="container">
             <br>
             <h1 class="text-center">Iniciar sesión - Vista Administrativa (Prototipo)</h1>
             <hr class="hr-custom">
 
-      <div class="card-body text-justify">  
-          <div class="mb-3">
-            <label for="Correo" class="form-label">Correo: </label>
-            <input type="text" class="form-control" name="txtCorreo" value="{{ old('txtCorreo') }}">
-            <small class="text-danger">{{ $errors->first('txtCorreo') }}</small>
-          </div>
-          <div class="mb-3">
-            <label for="Contraseña" class="form-label">Contraseña: </label>
-            <input type="text" class="form-control" name="txtContraseña">
-            <small class="text-danger">{{ $errors->first('txtContraseña') }}</small>
-          </div>
-          <div class="card-footer text-muted">
-            <div class="row">
-                <div class="col">
-                    <div class="d-grid gap-2 mt-2 mb-1">
-                        <button type="button" class="btn btn-sm btn-outline-primary">Limpiar</button>
+            <div class="card">
+            <div class="card-body text-justify">  
+                <div class="mb-3">
+                    <label for="Correo" class="form-label">Correo: </label>
+                    <input type="text" class="form-control" name="txtCorreo" value="{{ old('txtCorreo') }}">
+                    <small class="text-danger">{{ $errors->first('txtCorreo') }}</small>
+                </div>
+                <div class="mb-3">
+                    <label for="Contraseña" class="form-label">Contraseña: </label>
+                    <input type="text" class="form-control" name="txtContraseña">
+                    <small class="text-danger">{{ $errors->first('txtContraseña') }}</small>
+                </div>
+                <div class="card-footer text-muted">
+                        <div class="col">
+                            <div class="d-grid">
+                                <a href="{{route('rutavistasAdmin')}}" class="btn btn-primary" style="border-color: #6f42c1; blod-color: #6f42c1;">Iniciar sesión</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="d-grid gap-2 mt-2 mb-1">
-                        <a href="{{route('rutavistasAdmin')}}" class="btn btn-sm btn-outline-secondary">Iniciar sesión</a>
-                    </div>
-                </div>
+                <h5 class="mt-3" style="font-size: 12px"><a href="#"><span style="color: #d774e9">¿Olvidaste tu contraseña?</span></a></h5>
             </div>
-          </div>
-        <h5 class="mt-3" style="font-size: 12px"><a href="#"><span style="color: #ff5733">¿Olvidaste tu contraseña?</span></a></h5>
-      </div>
-    </div>
         </div>
+        </div><!--cierre tarjeta login-->
     </body>
 </html>

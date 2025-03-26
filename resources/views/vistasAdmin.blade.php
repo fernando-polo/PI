@@ -3,105 +3,68 @@
 @section('titulo', 'Vistas administrativas')
 
 @section('btn1')
-    <a href="{{route('rutavistasAdmin')}}" id="btnIconoUsuarios" class="btn btn-outline-primary">
-        <i class="bi bi-people-fill"></i>
-        Usuarios
-    </a>
-@endsection
 
-@section('btn2')
-    <a href="{{route('rutaaltamedico')}}" id="btnIconoMedicos" class="btn btn-outline-primary">
-        <i class="bi bi-hospital-fill"></i>
-        Médicos
-    </a>
-@endsection
-
-@section('btn3')
-    <a href="#" id="btnIconoEstudios" class="btn btn-outline-primary">
-        <i class="bi bi-file-earmark-medical-fill"></i>
-        Estudios
-    </a>
-@endsection
-
-@section('contenidoRegistros')
-    @foreach ($ConsultarUsuarios as $usuario)
-
-    {{-- Mensaje de confirmación de usuarioActualizado --}}
-    @session('usuarioActualizado')
-        <script>
-            Swal.fire({
-                text: "Se actualizo exitosamente el usuario: {{$value}}",
-                icon: "success"
-            })
-        </script>
-    @endsession
-
-    {{-- Mensaje de confirmación de usuarioEliminado --}}
-    @session('usuarioEliminado')
-        <script>
-            Swal.fire({
-                text: "Se elimino exitosamente el usuario.",
-                icon: "success"
-            })
-        </script>
-    @endsession
-
-    <div class="container mt-4 mb-4" >
-        <div class="card">
-            <div class="card-body">
-            <h5 class="card-title">CURP: {{$usuario -> curp}}</h5>
-            <p class="card-text"><strong>Nombre del usuario:</strong> {{$usuario -> nombre}}</p>
-            <p class="card-text"><strong>Apellido Paterno del usuario: </strong>{{$usuario -> a_paterno}}</p>
-            <p class="card-text"><strong>Apellido Materno del usuario: </strong>{{$usuario -> a_materno}}</p>
-            <p class="card-text"><strong>Email del usuario: </strong>{{$usuario -> email}}</p>
-            <p class="card-text"><strong>Contraseña del usuario: </strong>{{$usuario -> password}}</p>
-            <p class="card-text"><strong>Teléfono del usuario: </strong>{{$usuario -> telefono}}</p>
-
-            <div class="container">
-                <div class="row">
-                    {{-- Botón editar usuario --}}    
-                    <div class="col">           
-                        <a href=" {{route('rutausuariosUpdate', ['id' => $usuario->id]) }} " type="submit"class="btn btn-warning" >Editar</a>
-                    </div> 
-
-                    {{-- Botón elminar usuario --}}
-                    <div class="col text-end">
-                        {{-- <form id="eliminarUsuario{{$usuario->id}}" action="{{route('rutaeliminarUsuario', ['id' => $usuario->id] )}}"> --}}
-                        <form id="eliminarUsuario{{$usuario->id}}" action="{{route('rutaeliminarUsuario', $usuario->id)}}" method="POST" class="d-inline">
-                            @csrf
-                            @method('DELETE')
-                            <button type="button" class="btn btn-danger" onclick="confirmarUsuario({{ $usuario->id }})">Eliminar</button>
-                        </form>
+    <section class="py-24 px-4 lg:px-16">
+    <div class="container mx-auto px-[12px] md:px-24 xl:px-12 max-w-[1300px] nanum2">
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-28 lg:gap-y-16">
+            <div class="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                <a href="/" class="block">
+                    <div class="h-28">
+                        <div
+                            class="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-orange-400 rounded-xl justify-items-center align-middle">
+                            <img src="{{asset('/imageneMich/ima2.webp')}}"
+                                class="w-36 h-36  mt-6 m-auto" alt="usuarios" title="usuarios" loading="lazy"
+                                width="200" height="200">
+                        </div>
                     </div>
-                </div>
+                    <div class="p-6   z-10 w-full   ">
+                        <p
+                            class="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
+                            USUARIOS
+                        </p>
+                    </div>
+                </a>
             </div>
 
+            <div class="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                <a href="/" class="block">
+                    <div class="h-28">
+                        <div
+                            class="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-orange-400 rounded-xl justify-items-center align-middle">
+                            <img src="{{asset('/imageneMich/admedico.png')}}"
+                                class="w-36 h-36  mt-6 m-auto" alt="Medicos"
+                                title="Medicos" loading="lazy" width="200" height="200">
+                        </div>
+                    </div>
+                    <div class="p-6   z-10 w-full   ">
+                        <p
+                            class="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
+                            MEDICOS
+                        </p>
+                    </div>
+                </a>
             </div>
+
+            <div class="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                <a href="/" class="block">
+                    <div class="h-28">
+                        <div
+                            class="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-orange-400 rounded-xl justify-items-center align-middle">
+                            <img src="{{asset('/imageneMich/estudios.png')}}"
+                                class="w-36 h-36  mt-6 m-auto" alt="estudios" title="estudios" loading="lazy" width="200"
+                                height="200">
+                        </div>
+                    </div>
+                    <div class="p-6   z-10 w-full   ">
+                        <p
+                            class="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
+                            ESTUDIOS
+                        </p>
+                    </div>
+                </a>
+            </div>
+
         </div>
-        <hr>
     </div>
-
-    @endforeach
-
-{{-- Script de la función confirmarUsuario, con un sweetalert pregunta si se desea elimnar al usuario o no --}}
-    <script>
-        function confirmarUsuario(usuarioid){
-        Swal.fire({
-            title: "¿Estás seguro de eliminar a este usuario?",
-            text: "No podrás revertir esta acción",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Eliminar"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    document.getElementById(`eliminarUsuario${usuarioid}`).submit();
-                    };
-                });
-        }
-
-
-
-    </script>
-@endsection 
+</section>
+@endsection
