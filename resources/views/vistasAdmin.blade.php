@@ -3,68 +3,23 @@
 @section('titulo', 'Vistas administrativas')
 
 @section('btn1')
-
-    <section class="py-24 px-4 lg:px-16">
-    <div class="container mx-auto px-[12px] md:px-24 xl:px-12 max-w-[1300px] nanum2">
-        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-4 gap-y-28 lg:gap-y-16">
-            <div class="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <a href="/" class="block">
-                    <div class="h-28">
-                        <div
-                            class="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-orange-400 rounded-xl justify-items-center align-middle">
-                            <img src="{{asset('/imageneMich/ima2.webp')}}"
-                                class="w-36 h-36  mt-6 m-auto" alt="usuarios" title="usuarios" loading="lazy"
-                                width="200" height="200">
-                        </div>
-                    </div>
-                    <div class="p-6   z-10 w-full   ">
-                        <p
-                            class="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
-                            USUARIOS
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <a href="/" class="block">
-                    <div class="h-28">
-                        <div
-                            class="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-orange-400 rounded-xl justify-items-center align-middle">
-                            <img src="{{asset('/imageneMich/admedico.png')}}"
-                                class="w-36 h-36  mt-6 m-auto" alt="Medicos"
-                                title="Medicos" loading="lazy" width="200" height="200">
-                        </div>
-                    </div>
-                    <div class="p-6   z-10 w-full   ">
-                        <p
-                            class="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
-                            MEDICOS
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-            <div class="relative group h-48 flex   flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <a href="/" class="block">
-                    <div class="h-28">
-                        <div
-                            class="absolute -top-20 lg:top-[-10%] left-[5%] z-40  group-hover:top-[-40%] group-hover:opacity-[0.9]   duration-300 w-[90%] h-48 bg-orange-400 rounded-xl justify-items-center align-middle">
-                            <img src="{{asset('/imageneMich/estudios.png')}}"
-                                class="w-36 h-36  mt-6 m-auto" alt="estudios" title="estudios" loading="lazy" width="200"
-                                height="200">
-                        </div>
-                    </div>
-                    <div class="p-6   z-10 w-full   ">
-                        <p
-                            class="mb-2 inline-block text-tg text-center w-full  text-xl  font-sans  font-semibold leading-snug tracking-normal   antialiased">
-                            ESTUDIOS
-                        </p>
-                    </div>
-                </a>
-            </div>
-
-        </div>
-    </div>
-</section>
+    <a href="{{route('rutavistasMedicos')}}" id="btnIconoCalendario" class="btn btn-outline-primary">
+        <i class="bi bi-calendar"></i>        
+        Calendario
+    </a>
 @endsection
+
+@section('btn2')
+    <a href="{{route('rutavistasMedicosPC')}}" id="btnIconoCitasProximas" class="btn btn-outline-primary">
+        <i class="bi bi-calendar-plus"></i>
+        Próximas citas
+    </a>
+@endsection
+
+@section('btn3')
+    <a href="{{route('rutavistasMedicosCR')}}" id="btnIconoCitasRealizadas" class="btn btn-outline-primary">
+        <i class="bi bi-calendar-check"></i>        
+        Citas realizadas
+    </a>
+@endsection
+

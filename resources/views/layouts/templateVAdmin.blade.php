@@ -78,7 +78,8 @@
         <div class="container" >
             
             <br>
-            <h1 class="text-center">Vista administrativa (Prototipo)</h1>
+            <h1 class="text-center">Vista administrativa</h1>
+            <h3 class="text-center">Bienvenido administrador</h3>
             <hr class="hr-custom">
 
             <div class="row">
