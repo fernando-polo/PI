@@ -344,10 +344,13 @@
                         <div class="star-rating">★★★★★</div>
                         <p>180 opiniones</p>
                         <button class="btn btn-small" onclick="window.location.href='reservar.html'">Reservar cita</button>
+<<<<<<< HEAD
                         <div style="display: flex; gap: 10px; margin-top: 10px;">
                             <button>Información</button>
                             <button>Servicios</button>
                         </div>
+=======
+>>>>>>> 59d8fa9 (vistas medicos)
                     </div>
                 </div>
 
