@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Http\Requests\validadorRegistroUsuarios;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\CorreoConfirmacion;
 
 class usuariosController extends Controller
 {
@@ -31,6 +33,17 @@ class usuariosController extends Controller
      */
     public function store(validadorRegistroUsuarios $request)
     {
+
+        $usuario = [
+            'curp' => $request->txtCURP,
+            'nombre' => $request->txtNombre,
+            'a_paterno' => $request->txtAPaterno,
+            'a_materno' => $request->txtAMaterno,
+            'email' => $request->txtCorreo,
+            'telefono' => $request->txtTelefono,
+            'password' => $request->txtContraseña
+        ];
+
         DB::table('usuarios')->insert([
             'curp'=>$request->input('txtCURP'),
             'nombre'=>$request->input('txtNombre'),
@@ -43,10 +56,11 @@ class usuariosController extends Controller
             'updated_at'=>Carbon::now(),
         ]);
 
-        $usuario = $request->input('txtNombre');
+
+        Mail::to($usuario['email'])->send(new CorreoConfirmacion($usuario));
         
-        session()->flash('usuarioGuardado', $usuario);
-    
+        session()->flash('usuarioGuardado', $usuario['nombre']); 
+
         return to_route('rutaRegistro');
     }
 

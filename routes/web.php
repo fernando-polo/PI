@@ -31,9 +31,6 @@ Route::get('/iniciarSesion', [ControladorVistas::class, 'iniciarSesion'])->name(
     Route::get('/vistasMedicosPC', [ControladorVistas::class, 'vistasMedicosPC'])->name('rutavistasMedicosPC');
 
 
-
-
-
 // Rutas de los estudios
 Route::get('/seleccionarEstudio', [ControladorVistas::class, 'seleccionarEstudio'])->name('rutaseleccionarEstudio');
 Route::get('/estudioSeleccionadoT', [ControladorVistas::class, 'estudioSeleccionadoT'])->name('rutaestudioSeleccionadoT');
@@ -79,6 +76,9 @@ require base_path('routes/mich.php');
 >>>>>>> f0905d2 (Rutas y adminMedicos)
 =======
 
+<<<<<<< HEAD
 // Ruta API
 Route::get('/enviar-correo', [CitaController::class, 'enviarCorreoCita']);    
 >>>>>>> 80dbdca (API y cambios estéticos)
+=======
+>>>>>>> 271e65f (API corregida)
