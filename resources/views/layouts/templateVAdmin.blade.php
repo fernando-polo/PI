@@ -47,6 +47,9 @@
         {{-- Llamar a bootstrap --}}
         @vite('resources/js/app.js')
 
+        {{-- Llamar a tailwind--}}
+        <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
 
 
     </head>

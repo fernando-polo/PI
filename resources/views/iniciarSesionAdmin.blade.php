@@ -46,52 +46,57 @@
         {{-- LLamar a iconos de bootstraps --}}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+        {{-- Llamar a tailwind--}}
+        <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
         
         {{-- Llamar a bootstrap --}}
         @vite('resources/js/app.js')
 
     </head>
     <body>
-
-        <header> 
-            <nav>            
-                <div class="container-fluid">
-                    <div class="row mt-2 mb-2">
-                        <div class="col text-left">
-                            <a href="{{route('rutaInicio')}}"><img src="{{ asset('images/OncoCheck.jpeg') }}" alt="Logo - Clínica Médica" width="40" height="40"></a>
-                        </div>
-                    </div>
-                </div>
-            </nav>  
-        </header>
-        <div class="container">
-            <br>
-            <h1 class="text-center">Iniciar sesión - Vista Administrativa (Prototipo)</h1>
-            <hr class="hr-custom">
-
-            <div class="card">
-            <div class="card-body text-justify">  
-                <div class="mb-3">
-                    <label for="Correo" class="form-label">Correo: </label>
-                    <input type="text" class="form-control" name="txtCorreo" value="{{ old('txtCorreo') }}">
-                    <small class="text-danger">{{ $errors->first('txtCorreo') }}</small>
-                </div>
-                <div class="mb-3">
-                    <label for="Contraseña" class="form-label">Contraseña: </label>
-                    <input type="text" class="form-control" name="txtContraseña">
-                    <small class="text-danger">{{ $errors->first('txtContraseña') }}</small>
-                </div>
-                <div class="card-footer text-muted">
-                        <div class="col">
-                            <div class="d-grid">
-                                <a href="{{route('rutavistasAdmin')}}" class="btn btn-primary" style="border-color: #6f42c1; blod-color: #6f42c1;">Iniciar sesión</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h5 class="mt-3" style="font-size: 12px"><a href="#"><span style="color: #d774e9">¿Olvidaste tu contraseña?</span></a></h5>
-            </div>
+        <br>
+            <!-- component -->
+    <div class="min-h-screen bg-violet-600 flex items-center justify-center p-4">
+    <div class="max-w-md w-full bg-white rounded-xl shadow-lg p-8">
+        <center>
+        <a href="{{route('rutaInicio')}}"><img src="{{ asset('images/logosinBordes.jpg') }}" alt="Logo - Clínica Médica" width="130" height="130"></a>
+        </center>
+        <br>
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Bienvenido</h2>
+        
+        <form class="space-y-4">
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Correo electronico</label>
+            <input 
+            type="email" 
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
+            placeholder="your@email.com"
+            />
         </div>
-        </div><!--cierre tarjeta login-->
+
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Contrasena</label>
+            <input 
+            type="password" 
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
+            placeholder="••••••••"
+            />
+        </div>
+
+        <div class="flex items-center justify-between">
+            <label class="flex items-center">
+            <input type="checkbox" class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"/>
+            <span class="ml-2 text-sm text-gray-600">Recordar</span>
+            </label>
+            <a href="#" class="text-sm text-indigo-600 hover:text-indigo-500">Olvide mi contrasena?</a>
+        </div>
+
+        <div class="d-grid">
+            <a href="{{route('rutavistasAdmin')}}" class="btn btn-sm btn-outline-secondary" style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);">Iniciar Sesión</a> 
+        </div>
+        </form>
+    </div>
+    </div>
     </body>
 </html>
