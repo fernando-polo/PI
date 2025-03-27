@@ -23,9 +23,6 @@ Route::get('/iniciarSesion', [ControladorVistas::class, 'iniciarSesion'])->name(
     Route::get('/vistasMedicosPC', [ControladorVistas::class, 'vistasMedicosPC'])->name('rutavistasMedicosPC');
 
 
-
-
-
 // Rutas de los estudios
 Route::get('/seleccionarEstudio', [ControladorVistas::class, 'seleccionarEstudio'])->name('rutaseleccionarEstudio');
 Route::get('/estudioSeleccionadoT', [ControladorVistas::class, 'estudioSeleccionadoT'])->name('rutaestudioSeleccionadoT');
@@ -57,5 +54,3 @@ Route::post('/iniciarSesionFormulario', [ControladorVistas::class, 'iniciarSesio
     // Ruta para eliminar un usuario
     Route::delete('/usuarios/delete/{id}', [usuariosController::class, 'destroy'])->name('rutaeliminarUsuario');
 
-// Ruta API
-Route::get('/enviar-correo', [CitaController::class, 'enviarCorreoCita']);    
