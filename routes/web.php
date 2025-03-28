@@ -5,7 +5,9 @@ use App\Http\Controllers\ControladorVistas;
 use App\Http\Controllers\usuariosController;
 use App\Http\Controllers\CitaController;
 
+
 require base_path('routes/bris.php');
+require base_path('routes/mich.php');
 
 // Rutas "deafult"
 Route::get('/', [ControladorVistas::class, 'home'])->name('rutaInicio');

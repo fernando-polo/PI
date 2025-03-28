@@ -59,7 +59,7 @@
                 <div class="container-fluid">
                     <div class="row mt-2 mb-2">
                         <div class="col text-left">
-                            <a href="{{route('rutaInicio')}}"><img src="{{ asset('images/OncoCheck.jpeg') }}" alt="Logo - Clínica Médica" width="40" height="40"></a>
+                            <a href="{{route('rutaInicio')}}"><img src="{{ asset('images/logosinBordes.jpg') }}" alt="Logo - Clínica Médica" width="60" height="60"></a>
                         </div>
                         <div class="col">
                             <div class="dropdown d-flex justify-content-end">
