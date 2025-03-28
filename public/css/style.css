@@ -1,293 +1,294 @@
-
 /* inicio.blade.php */
-    /* NavBar */
+/* NavBar */
+#NavBar {
+    background-color: #8f7ada !important;
+    position: fixed;
+    /* Nuevo: Barra fija */
+    top: 0;
+    /* Nuevo: Pegada arriba */
+    width: 100%;
+    /* Nuevo: Ancho completo */
+    z-index: 1000;
+    /* Nuevo: Evita que otros elementos la cubran */
+    transition: all 0.3s ease;
+    /* Nuevo: Transición suave */
+}
 
+/* Ajuste para que el contenido no quede oculto */
+body {
+    padding-top: 80px;
+    /* Nuevo: Compensa la altura del navbar */
+}
 
-        #NavBar {
-            background-color: #8f7ada !important;
-        }
-        
+/* Efecto al hacer scroll (opcional) */
+#NavBar.navbar-scrolled {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-        /* NavBar Links */
-            .navbar-nav .nav-link {
-                transition: transform 0.3s ease; 
-            }
+/* NavBar Links */
+.navbar-nav .nav-link {
+    transition: transform 0.3s ease;
+}
 
-            .navbar-nav .nav-link:hover {
-                transform: scale(1.05); 
-                color: black;
-            }
+.navbar-nav .nav-link:hover {
+    transform: scale(1.05);
+    color: black;
+}
 
+/* Botón NavBar - Registrarse */
+.btn.btn-sm.btn-outline-primary {
+    border-color: #711BA4;
+    background-color: white;
+    color: #711BA4;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 12px;
+    border-width: 4px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
 
-        /* Botón NavBar - Registrarse */
-            .btn.btn-sm.btn-outline-primary{
-                border-color: #711BA4;
-                background-color: white;
-                color: #711BA4;
-                transition: background-color 0.3s ease, transform 0.3s ease; 
-                border-radius: 12px;
-                border-width: 4px; 
-                font-weight: bold;
-                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            }
+.btn.btn-sm.btn-outline-primary:hover {
+    transform: scale(1.05);
+}
 
-            .btn.btn-sm.btn-outline-primary:hover{
-                transform: scale(1.05);
-            }
+/* Botón NavBar - Iniciar Sesión */
+.btn.btn-sm.btn-outline-secondary {
+    border-color: #711BA4;
+    background-color: #711BA4;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 12px;
+    border-width: 4px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
 
+.btn.btn-sm.btn-outline-secondary:hover {
+    transform: scale(1.05);
+}
 
-        /* Botón NavBar - Iniciar Sesión */
-            .btn.btn-sm.btn-outline-secondary{
-                border-color: #711BA4;
-                background-color: #711BA4;
-                color: white;
-                transition: background-color 0.3s ease, transform 0.3s ease; 
-                border-radius: 12px;
-                border-width: 4px;
-                font-weight: bold;
-                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            }
+/* Hero Section */
+/* Título */
+.col-lg-6 .titulo {
+    font-size: 68px;
+    font-weight: bold;
+}
 
-            .btn.btn-sm.btn-outline-secondary:hover{
-                transform: scale(1.05);
-            }
+/* Imagen */
+.col-lg-6 img {
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
 
+.col-lg-6 p {
+    font-weight: bold;
+}
 
+/* Nuestros Estudios */
+.hr-custom {
+    border-top: 2px solid #8f7ada;
+    width: 40%;
+    margin: 20px auto;
+}
 
-    /* Hero Section */
+.container .container .row .card {
+    width: 14rem;
+    height: 20rem;
+    background-color: #E8E8E8;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
 
+.container .container .row .card .row img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
 
-            /* Título */
-            .col-lg-6 .titulo {
-                font-size: 68px;
-                font-weight: bold;
-            }
+/* Footer */
+footer {
+    background-color: #E8E8E8;
+    padding-top: 20px;
+    color: #8f7ada !important;
+}
 
+/* Footer Links */
+.col-2 a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-            /* Imagen */
-            .col-lg-6 img{
-                border-radius: 12px;
-                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            }
-
-            .col-lg-6 p{
-                font-weight: bold;
-            }
-
-
-
-    /* Nuestros Estudios */
-            .hr-custom{
-                border-top: 2px solid #8f7ada; 
-                width: 40%;                   
-                margin: 20px auto;
-            }
-
-            .container .container .row .card{
-                width: 14rem; 
-                height: 20rem; 
-                background-color: #E8E8E8;
-                border-radius: 12px;
-                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            }
-
-            .container .container .row .card .row img{
-                width: 100%; 
-                height: 10rem; 
-                object-fit: cover;
-            }
-
-
-
-    /* Footer */
-
-        footer{
-            background-color: #E8E8E8; 
-            padding-top: 20px; 
-            color: #8f7ada !important;
-        }
-
-        /* Footer Links */
-        .col-2 a{
-            color: black;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        } 
-
-        .col-2 a:hover{
-            color: #711BA4;
-            text-decoration: underline;
-        }
-
+.col-2 a:hover {
+    color: #711BA4;
+    text-decoration: underline;
+}
 
 /* registro.blade.php */
+/* Form */
+.container-form.container {
+    background-color: #E8E8E8;
+    border-radius: 12px;
+}
 
-    /* Form */
-        .container-form.container {
-            background-color: #E8E8E8;
-            border-radius: 12px;
-        }
-
-        .container .card .card-body .mb-3 .form-control{
-            background-color: white;
-            border-color: #8f7ada;
-            border-width: 2px;
-
-        }
-
+.container .card .card-body .mb-3 .form-control {
+    background-color: white;
+    border-color: #8f7ada;
+    border-width: 2px;
+}
 
 /* seleccionarEstudio.blade.php */
-        /* Botones - Agendar cita, Próximas citas, Historial de citas */
+/* Botones - Agendar cita, Próximas citas, Historial de citas */
+.container .row .container .btn.btn-primary.btn_personalizado {
+    border-color: #DADADA;
+    background-color: #DADADA;
+    ;
+    color: #8f7ada;
+    transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 12px 0 12px 0px;
+    ;
+    border-width: 4px;
+    font-weight: bold;
+}
 
-        .container .row .container .btn.btn-primary.btn_personalizado{
-            border-color: #DADADA;
-            background-color: #DADADA;;
-            color: #8f7ada;
-            transition:border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; 
-            border-radius: 12px 0 12px 0px;;
-            border-width: 4px;
-            font-weight: bold;
-        }
+.container .row .container .btn.btn-primary.btn_personalizado:hover {
+    transform: scale(1.05);
+    background-color: #E8E8E8;
+    border-color: #E8E8E8;
+}
 
-        .container .row .container .btn.btn-primary.btn_personalizado:hover{
-            transform: scale(1.05);
-            background-color: #E8E8E8;
-            border-color: #E8E8E8;
-        }
-
-        /* Container con estudios a seleccionar */
-
-        .container.container_personalizado{
-            background-color: #E8E8E8; 
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
-        }
+/* Container con estudios a seleccionar */
+.container.container_personalizado {
+    background-color: #E8E8E8;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+}
 
 /* estudioSeleccionado.blade.php (ocupa el container de "seleccionarEstudio") */
+/* cards */
+.container.container.container_personalizado .row .container .row .card.card_estudioSeleccionado {
+    width: 20rem;
+}
 
-        /* cards */
-        .container.container.container_personalizado .row .container .row .card.card_estudioSeleccionado{
-            width: 20rem;
-        }
-
-        /* imagenes en las cards */
-        .container.container.container_personalizado .row .container .row .card.card_estudioSeleccionado .row img{
-            width: 100%;
-            height: 100%;
-            object-fit: contain; 
-        }
-
+/* imagenes en las cards */
+.container.container.container_personalizado .row .container .row .card.card_estudioSeleccionado .row img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
 /* sweetAlert custom */
-        /* botón de confirmación */
-        .custom-confirm-button-usuarioGuardado {
-            background-color: #711BA4 !important; 
-            color: #fff !important; 
-            border: none; 
-            border-color: #711BA4;
-            border-radius: 4px; 
-            padding: 10px 20px; 
-        }
+/* botón de confirmación */
+.custom-confirm-button-usuarioGuardado {
+    background-color: #711BA4 !important;
+    color: #fff !important;
+    border: none;
+    border-color: #711BA4;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
 
-        .custom-confirm-button-datosValidados {
-            background-color: #711BA4 !important; 
-            color: #fff !important; 
-            border: none; 
-            border-color: #711BA4;
-            border-radius: 4px; 
-            padding: 10px 20px; 
-        }
+.custom-confirm-button-datosValidados {
+    background-color: #711BA4 !important;
+    color: #fff !important;
+    border: none;
+    border-color: #711BA4;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
 
 /* vistasAdmin.blade.php */
-        /* botones - iconos */
-        #btnIconoUsuarios{
-            border-color: #8f7ada;
-            background-color: white;
-            color: #711BA4;
-            transition: background-color 0.3s ease, transform 0.3s ease; 
-            border-radius: 12px;
-            border-width: 4px; 
-            font-weight: bold;
-            font-size: 16px;
-        }
+/* botones - iconos */
+#btnIconoUsuarios {
+    border-color: #8f7ada;
+    background-color: white;
+    color: #711BA4;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 12px;
+    border-width: 4px;
+    font-weight: bold;
+    font-size: 16px;
+}
 
-        #btnIconoUsuarios:hover{
-            transform: scale(1.05);
-        }
+#btnIconoUsuarios:hover {
+    transform: scale(1.05);
+}
 
-        #btnIconoMedicos{
-            border-color: #8f7ada;
-            background-color: white;
-            color: #711BA4;
-            transition: background-color 0.3s ease, transform 0.3s ease; 
-            border-radius: 12px;
-            border-width: 4px; 
-            font-weight: bold;
-            font-size: 16px;
-        }
+#btnIconoMedicos {
+    border-color: #8f7ada;
+    background-color: white;
+    color: #711BA4;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 12px;
+    border-width: 4px;
+    font-weight: bold;
+    font-size: 16px;
+}
 
-        #btnIconoMedicos:hover{
-            transform: scale(1.05);
-        }
+#btnIconoMedicos:hover {
+    transform: scale(1.05);
+}
 
-        #btnIconoEstudios{
-            border-color: #8f7ada;
-            background-color: white;
-            color: #711BA4;
-            transition: background-color 0.3s ease, transform 0.3s ease; 
-            border-radius: 12px;
-            border-width: 4px; 
-            font-weight: bold;
-            font-size: 16px;
-        }
+#btnIconoEstudios {
+    border-color: #8f7ada;
+    background-color: white;
+    color: #711BA4;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 12px;
+    border-width: 4px;
+    font-weight: bold;
+    font-size: 16px;
+}
 
-        #btnIconoEstudios:hover{
-            transform: scale(1.05);
-        }
+#btnIconoEstudios:hover {
+    transform: scale(1.05);
+}
 
 /* vistasMedicos.blade.php */
-        /* botones - iconos */
-        #btnIconoCalendario{
-            border-color: #8f7ada;
-            background-color: white;
-            color: #711BA4;
-            transition: background-color 0.3s ease, transform 0.3s ease; 
-            border-radius: 12px;
-            border-width: 4px; 
-            font-weight: bold;
-            font-size: 16px;
-        }
+/* botones - iconos */
+#btnIconoCalendario {
+    border-color: #8f7ada;
+    background-color: white;
+    color: #711BA4;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 12px;
+    border-width: 4px;
+    font-weight: bold;
+    font-size: 16px;
+}
 
-        #btnIconoCalendario:hover{
-            transform: scale(1.05);
-        }
+#btnIconoCalendario:hover {
+    transform: scale(1.05);
+}
 
-        #btnIconoCitasProximas{
-            border-color: #8f7ada;
-            background-color: white;
-            color: #711BA4;
-            transition: background-color 0.3s ease, transform 0.3s ease; 
-            border-radius: 12px;
-            border-width: 4px; 
-            font-weight: bold;
-            font-size: 16px;
-        }
+#btnIconoCitasProximas {
+    border-color: #8f7ada;
+    background-color: white;
+    color: #711BA4;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 12px;
+    border-width: 4px;
+    font-weight: bold;
+    font-size: 16px;
+}
 
-        #btnIconoCitasProximas:hover{
-            transform: scale(1.05);
-        }
+#btnIconoCitasProximas:hover {
+    transform: scale(1.05);
+}
 
-        #btnIconoCitasRealizadas{
-            border-color: #8f7ada;
-            background-color: white;
-            color: #711BA4;
-            transition: background-color 0.3s ease, transform 0.3s ease; 
-            border-radius: 12px;
-            border-width: 4px; 
-            font-weight: bold;
-            font-size: 16px;
-        }
+#btnIconoCitasRealizadas {
+    border-color: #8f7ada;
+    background-color: white;
+    color: #711BA4;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 12px;
+    border-width: 4px;
+    font-weight: bold;
+    font-size: 16px;
+}
 
-        #btnIconoCitasRealizadas:hover{
-            transform: scale(1.05);
-        }
+#btnIconoCitasRealizadas:hover {
+    transform: scale(1.05);
+}
