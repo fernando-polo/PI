@@ -25,9 +25,6 @@ Route::get('/vistasMedicosCR', [ControladorVistas::class, 'vistasMedicosCR'])->n
 Route::get('/vistasMedicosPC', [ControladorVistas::class, 'vistasMedicosPC'])->name('rutavistasMedicosPC');
 
 
-
-
-
 // Rutas de los estudios
 Route::get('/seleccionarEstudio', [ControladorVistas::class, 'seleccionarEstudio'])->name('rutaseleccionarEstudio');
 Route::get('/estudioSeleccionadoT', [ControladorVistas::class, 'estudioSeleccionadoT'])->name('rutaestudioSeleccionadoT');

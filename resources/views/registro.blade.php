@@ -13,7 +13,7 @@
         @session ('usuarioGuardado')
           <script>
             Swal.fire({
-                text: "Se guardó el usuario: {{$value}}",
+                text: "¡Te has registrado {{$value}}!, verifica en tu correo.",
                 icon: "success",
                 confirmButtonText: "Aceptar",
                 customClass: {
