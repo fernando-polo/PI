@@ -45,6 +45,7 @@
 
         
         {{-- Llamar a bootstrap --}}
+        
         @vite('resources/js/app.js')
 
         {{-- Llamar a tailwind--}}
