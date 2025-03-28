@@ -50,3 +50,11 @@ Route::get('/medico/citas', function() {
 Route::get('/medico/disponibilidad', function() {
     return view('briss.disponibilidadMedico'); // Vista en subcarpeta briss
 })->name('disponibilidad');
+
+Route::get('/historial-citas', function () {
+    return view('briss.principalMedico');
+})->name('historial-citas');
+
+Route::get('/', function () {
+    return view('welcome');
+})->name('rutaInicio');
