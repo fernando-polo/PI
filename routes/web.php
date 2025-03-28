@@ -59,5 +59,3 @@ Route::put('/usuarios/{id}/update', [usuariosController::class, 'update'])->name
 // Ruta para eliminar un usuario
 Route::delete('/usuarios/delete/{id}', [usuariosController::class, 'destroy'])->name('rutaeliminarUsuario');
 
-// Ruta API
-Route::get('/enviar-correo', [CitaController::class, 'enviarCorreoCita']);
