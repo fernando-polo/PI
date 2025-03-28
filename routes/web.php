@@ -11,7 +11,9 @@ require base_path('routes/bris.php');
 use App\Http\Controllers\CitaController;
 >>>>>>> 80dbdca (API y cambios estéticos)
 
+
 require base_path('routes/bris.php');
+require base_path('routes/mich.php');
 
 // Rutas "deafult"
 Route::get('/', [ControladorVistas::class, 'home'])->name('rutaInicio');
