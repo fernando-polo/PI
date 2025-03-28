@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OncoCheck - Historial de citas</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+@extends('layouts.templateMedico')
+
+@section('titulo', 'OncoCheck - Historial de citas')
+
+@push('styles')
+
+    <!-- Estilos específicos para esta vista -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -689,38 +689,23 @@
     margin-bottom: 5px;
 }
     </style>
+       @endpush
 </head>
 <body>
-    <!-- Barra de navegación principal (ahora morada) -->
-    <nav class="navbar">
-        <div style="display: flex; align-items: center;">
-            <div class="navbar-brand">OncoCheck</div>
-            <div class="nav-links">
-                <a href="#" class="nav-link">Citas</a>
-                <a href="#" class="nav-link">Agenda</a>
-                <a href="#" class="nav-link active">Historial de citas</a>
-            </div>
-        </div>
-        <div class="user-icon" onclick="window.location.href='perfil.html'">
-            <i class="fas fa-user"></i>
-        </div>
-    </nav>
+  
 
-    <!-- Contenido principal -->
     <div class="main-content">
         <div class="main-container">
-            <!-- Columna izquierda (blanca) - ahora más estrecha -->
+            <!-- Columna izquierda -->
             <div class="left-column">
                 <div class="card">
-                    <!-- Barra morada con texto "Historial de citas" -->
                     <div class="header-bar">
                         <h1>Historial de citas</h1>
                     </div>
                     
                     <h2>Clinica Castillo Lopez</h2>
                     <p>Calle Matamoros 28, Queretaro</p>
-
-                    <!-- Componente de calendario -->
+    
                     <table class="calendar">
                         <thead>
                             <tr>
@@ -746,48 +731,32 @@
                                 <td class="available-slot">11:30</td>
                                 <td>-</td>
                             </tr>
-                            <tr>
-                                <td>20:00</td>
-                                <td>-</td>
-                                <td class="available-slot">16:30</td>
-                                <td class="available-slot">12:00</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>-</td>
-                                <td>-</td>
-                                <td class="available-slot">17:00</td>
-                                <td class="available-slot">12:30</td>
-                                <td>-</td>
-                            </tr>
                         </tbody>
                     </table>
-
+    
                     <a href="#" class="btn">Ver más</a>
                 </div>
             </div>
-
-            <!-- Columna derecha (contenedores morados) - ahora más ancha -->
+    
+            <!-- Columna derecha -->
             <div class="right-column">
                 <div class="card purple-card doctor-card">
                     <div class="doctor-avatar">Foto</div>
                     <div class="doctor-info">
                         <h2>Drª Susana Villagomez</h2>
                         <p>Dermatóloga<br>Numero de colegiado 0000000</p>
-                        
                         <div class="star-rating">★★★★★</div>
                         <p>180 opiniones</p>
-                        <button class="btn btn-small" onclick="window.location.href='reservar.html'">Reservar cita</button>
+                        <button class="btn btn-small">Reservar cita</button>
                         <div style="display: flex; gap: 10px; margin-top: 10px;">
                             <button id="infoBtn">Información</button>
                             <button>Servicios</button>
                         </div>
                     </div>
                 </div>
-
+    
                 <div class="card purple-card">
                     <div class="section-title">Consultas</div>
-
                     <div class="service-item">
                         <input type="checkbox" id="consulta1" name="consulta1">
                         <label for="consulta1">
@@ -799,10 +768,9 @@
                         </label>
                     </div>
                 </div>
-
+    
                 <div class="card purple-card">
                     <div class="section-title">Experencia</div>
-
                     <div class="service-item">
                         <input type="checkbox" id="experiencia" name="experiencia">
                         <label for="experiencia">
@@ -810,7 +778,6 @@
                             Tras años de experiencia acumulada en la practica privada, en 2012 decide emprender mi propio proyecto abriendo una clínica particular...
                         </label>
                     </div>
-
                     <a href="#" class="btn btn-edit">Editar experiencia</a>
                 </div>
             </div>
@@ -930,12 +897,14 @@ Tras años de experiencia acumulada en la practica privada , en 2012 decido empr
         </div>
     </div>
 </div>
+@endsection
          
     <!-- Pie de página -->
     <footer class="footer">
         <p>Copyright © 2025 OncoCheck<br>Todos los derechos reservados.</p>
     </footer>
 
+    @push('scripts')  <!-- agregado -->
     <script>
         // Obtener elementos del DOM
         const infoBtn = document.getElementById('infoBtn');
@@ -1050,5 +1019,6 @@ window.addEventListener('click', function(event) {
     }
 });
     </script>
+    @endpush
 </body>
 </html>

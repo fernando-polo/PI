@@ -279,11 +279,8 @@
                         <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme su nueva contraseña" required>
                         <i class="fas fa-eye toggle-password" onclick="togglePassword('confirm-password')"></i>
                     </div>
+
                     
-                    <div class="options">
-                        <div class="option-item">Recuperar contraseña</div>
-                        <div class="option-subitem">Recordar credenciales</div>
-                    </div>
                     
                     <button type="submit" class="btn-confirm">Confirmar</button>
                 </form>
