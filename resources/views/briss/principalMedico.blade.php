@@ -691,7 +691,9 @@
     </style>
        @endpush
 </head>
+@section('contenido')  
 <body>
+    
   
 
     <div class="main-content">
@@ -899,11 +901,7 @@ Tras años de experiencia acumulada en la practica privada , en 2012 decido empr
 </div>
 @endsection
          
-    <!-- Pie de página -->
-    <footer class="footer">
-        <p>Copyright © 2025 OncoCheck<br>Todos los derechos reservados.</p>
-    </footer>
-
+   
     @push('scripts')  <!-- agregado -->
     <script>
         // Obtener elementos del DOM
