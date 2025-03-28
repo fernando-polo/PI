@@ -22,9 +22,6 @@
         <!-- Color de la página web -->
         <meta name="theme-color" content="8F7ada">
 
-
-
-        
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="{{ asset('OncoCheck.ico') }}">
 
@@ -37,26 +34,39 @@
         {{-- Llamar a CSS --}}
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-
         {{-- LLamar a SweetAlert --}}
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
         
         {{-- Llamar a bootstrap --}}
         @vite('resources/js/app.js')
 
-      {{-- Notas: 
-      Hacer yields para los datos necesarios del head
-      Acomodar posición del Logos
-      Arreglar footer --}}
-
+        <style>
+            #NavBar {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+                transition: all 0.3s ease;
+            }
+            
+            body {
+                padding-top: 80px; /* Ajusta según la altura de tu navbar */
+            }
+            
+            /* Opcional: Efecto al hacer scroll */
+            #NavBar.navbar-scrolled {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+        </style>
     </head>
     <body>
         <header>
-              <nav class="navbar navbar-expand-lg navbar-light bg-light" id="NavBar">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light py-4" id="NavBar">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">
-                    <a href="{{route('rutaInicio')}}"><img src="{{ asset('images/OncoCheck.jpeg') }}" alt="Logo - Clínica Médica" width="40" height="40"></a>
+                    <a href="{{route('rutaInicio')}}"><img src="{{ asset('images/OncoCheck.jpeg') }}" alt="Logo - Clínica Médica" width="50" height="50"></a>
                   </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -64,19 +74,19 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 ms-2"> 
                       <li class="nav-item">
-                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#NuestrosEstudios">Estudios</a>
+                        <a class="btn btn-sm btn-outline-secondary" href="{{ route('rutaInicio', [], false) }}#NuestrosEstudios">Estudios</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#MedicosDePrimera">Médicos</a>
+                        <a class="btn btn-sm btn-outline-secondary" href="{{ route('rutaInicio', [], false) }}#MedicosDePrimera">Médicos</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#Testimonios">Testimonios</a>
+                        <a class="btn btn-sm btn-outline-secondary" href="{{ route('rutaInicio', [], false) }}#Testimonios">Testimonios</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#ReferenciasNacionales">Ayuda emocional</a>
+                        <a class="btn btn-sm btn-outline-secondary" href="{{ route('RutaAyudaEmocional') }}">Ayuda emocional</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="{{ route('rutaInicio', [], false) }}#SobreNosotros">Nosotros</a>
+                        <a class="btn btn-sm btn-outline-secondary" href="{{ route('rutaInicio', [], false) }}#SobreNosotros">Nosotros</a>
                       </li>
                     </ul>
                     <div class="text-end">
@@ -91,7 +101,7 @@
               </nav>
         </header>
 
-            @yield('contenido')
+        @yield('contenido')
 
         <footer>
             <div class="container-fluid">
@@ -135,9 +145,20 @@
                         <a href=""><h6>Email</h6></a>
                         <br>
                     </div>
-                    
                 </div>
             </div>
         </footer>
+
+        <script>
+            // Opcional: Efecto al hacer scroll
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('NavBar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+        </script>
     </body>
 </html>
