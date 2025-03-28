@@ -12,16 +12,20 @@
 
         @session ('usuarioGuardado')
           <script>
-              Swal.fire({
-                text: "Se guardó el usuario: {{$value}}",
-                icon: "success"
+            Swal.fire({
+                text: "¡Te has registrado {{$value}}!, verifica en tu correo.",
+                icon: "success",
+                confirmButtonText: "Aceptar",
+                customClass: {
+                    confirmButton: 'custom-confirm-button-usuarioGuardado'
+                }
             });
           </script>
         @endsession
 
       <div class="card">
         <div class="card-header fs-5 text-center text-primary">
-          ¡Regístrate para agendar una cita!
+          <span style="color: #ff5733">¡Regístrate para agendar una cita!</span>
         </div>
     
         <div class="card-body text-justify">
@@ -38,7 +42,7 @@
               <small class="text-danger">{{ $errors->first('txtNombre') }}</small>
             </div>
             <div class="mb-3">
-              <label for="APaterno" class="form-label">Apellido Paterno: </label>
+              <label for="APaterno" class="form-label" >Apellido Paterno: </label>
               <input type="text" class="form-control" name="txtAPaterno" value="{{ old('txtAPaterno') }}">
               <small class="text-danger">{{ $errors->first('txtAPaterno') }}</small>
             </div>
@@ -54,13 +58,13 @@
             </div>
             <div class="mb-3">
               <label for="Contraseña" class="form-label">Contraseña: </label>
-              <input type="text" class="form-control" name="txtContraseña">
+              <input type="text" class="form-control" name="txtContraseña" value="{{ old('txtContraseña') }}" placeholder="Mínimo 8 letras, 1 mayúscula, 1 número y 1 carácter especial (@$!%*#?&)">
               <small class="text-danger">{{ $errors->first('txtContraseña') }}</small>
             </div>
             <div class="mb-3">
               <label for="Telefono" class="form-label">Número de teléfono: </label>
-              <input type="text" class="form-control" name="txtTelefono">
-              <small class="text-danger">{{ $errors->first('txttelefono') }}</small>
+              <input type="text" class="form-control" name="txtTelefono" value="{{ old('txtTelefono') }}">
+              <small class="text-danger">{{ $errors->first('txtTelefono') }}</small>
             </div>
             <div class="card-footer text-muted">
               <div class="row">

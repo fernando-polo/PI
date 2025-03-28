@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Http\Requests\validadorRegistroUsuarios;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\CorreoConfirmacion;
 
 class usuariosController extends Controller
 {
@@ -15,7 +17,7 @@ class usuariosController extends Controller
     public function index()
     {
         $ConsultarUsuarios = DB::table('usuarios')->get();
-        return view ('usuariosGuardados', compact('ConsultarUsuarios'));
+        return view ('vistasAdmin', compact('ConsultarUsuarios'));
     }
 
     /**
@@ -31,6 +33,17 @@ class usuariosController extends Controller
      */
     public function store(validadorRegistroUsuarios $request)
     {
+
+        $usuario = [
+            'curp' => $request->txtCURP,
+            'nombre' => $request->txtNombre,
+            'a_paterno' => $request->txtAPaterno,
+            'a_materno' => $request->txtAMaterno,
+            'email' => $request->txtCorreo,
+            'telefono' => $request->txtTelefono,
+            'password' => $request->txtContraseña
+        ];
+
         DB::table('usuarios')->insert([
             'curp'=>$request->input('txtCURP'),
             'nombre'=>$request->input('txtNombre'),
@@ -43,10 +56,11 @@ class usuariosController extends Controller
             'updated_at'=>Carbon::now(),
         ]);
 
-        $usuario = $request->input('txtNombre');
+
+        Mail::to($usuario['email'])->send(new CorreoConfirmacion($usuario));
         
-        session()->flash('usuarioGuardado', $usuario);
-    
+        session()->flash('usuarioGuardado', $usuario['nombre']); 
+
         return to_route('rutaRegistro');
     }
 
@@ -63,15 +77,37 @@ class usuariosController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $usuario = DB::table('usuarios')
+        ->where('id', $id)
+        ->first();
+        return view ('usuariosUpdate', compact('usuario'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(validadorRegistroUsuarios $request, string $id)
     {
-        //
+        DB::table('usuarios')
+        ->where('id', $id)
+        ->update([
+            'curp' => $request->txtCURP,
+            'nombre' => $request->txtNombre,
+            'a_paterno' => $request->txtAPaterno,
+            'a_materno' => $request->txtAMaterno,
+            'email' => $request->txtCorreo,
+            'password' => $request->txtContraseña,
+            'telefono' => $request->txtTelefono,
+            'updated_at' => Carbon::now(),
+        ]);
+
+        $usuario = $request->txtNombre;
+
+        session()->flash('usuarioActualizado', $usuario);
+
+        return to_route('rutavistasAdmin');
+
+
     }
 
     /**
@@ -79,6 +115,10 @@ class usuariosController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('usuarios')->where('id', $id)->delete();
+
+        session()->flash('usuarioEliminado');
+
+        return to_route('rutavistasAdmin');
     }
 }

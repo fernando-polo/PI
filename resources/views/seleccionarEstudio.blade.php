@@ -24,11 +24,11 @@
               
                   <div class="card align-items-center justify-content-center">
                       <div class="row">
-                          <img src="{{ asset('images/NE_Densitometria.jpg') }}" class="card-img-top" alt="Card Densitometria" id="Card_Img_NE_Densitometria">
+                          <img src="{{ asset('images/NE_Tomografia.jpg') }}" class="card-img-top" alt="Card Densitometria" id="Card_Img_NE_Densitometria">
                       </div>
                       <br>
                       <div class="row">
-                          <a href="{{route('rutaestudioSeleccionadoD')}}" class="btn btn-sm btn-outline-secondary">Densitometría</a>
+                          <a href="{{route('rutaestudioSeleccionadoT')}}" class="btn btn-sm btn-outline-secondary">Tomografías</a>
                       </div>
                   </div>
               
@@ -54,11 +54,11 @@
               
                   <div class="card align-items-center justify-content-center">
                       <div class="row">
-                          <img src="{{ asset('images/NE_VPH.jpg') }}" class="card-img-top" alt="Card VPH" id="Card_Img_NE_VPH">
+                          <img src="{{ asset('images/NE_Colonoscopia.jpg') }}" class="card-img-top" alt="Card VPH" id="Card_Img_NE_VPH">
                       </div>
                       <br>
                       <div class="row">
-                          <a href="{{route('rutaestudioSeleccionadoE')}}" class="btn btn-sm btn-outline-secondary">Electrocardiograma</a>
+                          <a href="{{route('rutaestudioSeleccionadoC')}}" class="btn btn-sm btn-outline-secondary">Colonoscopia</a>
                       </div>
                   </div>
               </div>  

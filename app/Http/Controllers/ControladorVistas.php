@@ -19,14 +19,40 @@ class ControladorVistas extends Controller
             return view('iniciarSesion');
         }
 
+    // Ruta iniciar sesión Admin
+        public function iniciarSesionAdmin(){
+            return view('iniciarSesionAdmin');
+        }
+
+    // Rutas para médicos
+
+        // Ruta iniciar sesión Médicos
+            public function iniciarSesionMedicos(){
+                return view('iniciarSesionMedicos');
+            }
+
+        // Rutas de las vistas
+            public function vistasMedicos(){
+                return view('vistasMedicos');
+            }
+
+            public function vistasMedicosPC(){
+                return view('vistasMedicosPC');
+            }
+    
+
+            public function vistasMedicosCR(){
+                return view('vistasMedicosCR');
+            }
+    
     
     // Rutas de los estudios
         public function seleccionarEstudio(){
             return view('seleccionarEstudio');
         }
 
-        public function estudioSeleccionadoD(){
-            return view('estudioSeleccionadoD');
+        public function estudioSeleccionadoT(){
+            return view('estudioSeleccionadoT');
         }
 
         public function estudioSeleccionadoM(){
@@ -41,8 +67,8 @@ class ControladorVistas extends Controller
             return view('estudioSeleccionadoU');
         }
 
-        public function estudioSeleccionadoE(){
-            return view('estudioSeleccionadoE');
+        public function estudioSeleccionadoC(){
+            return view('estudioSeleccionadoC');
         }
 
         public function proximasCitas(){
@@ -52,19 +78,6 @@ class ControladorVistas extends Controller
         public function historialDeCitas(){
             return view('historialDeCitas');
         }
-
-
-
-    // Rutas de los forms
-        // public function registrarUsuario(validadorRegistroUsuarios $peticionValidada){
-
-        //     // Redireción con valores en session
-        //     $usuario = $peticionValidada->input('txtNombre');
-        
-        //     session()->flash('usuarioGuardado', $usuario);
-        
-        //     return to_route('rutaRegistro');
-        // }
 
 
         public function iniciarSesionFormulario(validadorIniciarSesion $peticionValidada){
