@@ -3,7 +3,8 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "postinstall": "npm run build"
     },
     "devDependencies": {
         "@popperjs/core": "^2.11.8",
@@ -17,6 +18,7 @@
         "vite": "^6.2.3"
     },
     "dependencies": {
-        "bootstrap": "^5.3.3"
+        "bootstrap": "^5.3.3",
+        "vite": "^6.2.3"
     }
 }
