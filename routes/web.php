@@ -8,6 +8,7 @@ use App\Http\Controllers\CitaController;
 
 require base_path('routes/bris.php');
 require base_path('routes/mich.php');
+require base_path('routes/paul.php');
 
 // Rutas "deafult"
 Route::get('/', [ControladorVistas::class, 'home'])->name('rutaInicio');
