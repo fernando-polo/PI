@@ -52,7 +52,7 @@ Route::get('/medico/disponibilidad', function() {
 })->name('disponibilidad');
 
 Route::get('/historial-citas', function () {
-    return view('briss.principalMedico');
+    return view('briss.historialCitas');
 })->name('historial-citas');
 
 Route::get('/', function () {

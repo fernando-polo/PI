@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OncoCheck - Administración de Citas</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+@extends('layouts.templateMedico')
+
+@section('titulo', 'OncoCheck - Historial de citas')
+
+@push('styles')
     <style>
         :root {
             --primary-color: #6a1b9a;
@@ -394,23 +392,10 @@
             color: var(--primary-color);
         }
     </style>
+     @endpush
 </head>
+@section('contenido') 
 <body>
-    <!-- Barra de navegación principal -->
-    <nav class="navbar">
-        <div style="display: flex; align-items: center;">
-            <div class="navbar-brand">OncoCheck</div>
-            <div class="nav-links">
-                <a href="#" class="nav-link active">Citas</a>
-                <a href="#" class="nav-link">Disponibilidad</a>
-                <a href="#" class="nav-link">Historial</a>
-            </div>
-        </div>
-        <div class="user-icon" onclick="window.location.href='perfil.html'">
-            <i class="fas fa-user"></i>
-        </div>
-    </nav>
-
     <!-- Contenido principal -->
     <div class="main-content">
         <!-- Barra lateral -->
@@ -620,12 +605,10 @@
             </div>
         </div>
     </div>
-
-    <!-- Pie de página -->
-    <footer class="footer">
-        <p>Copyright © 2025 OncoCheck<br>Todos los derechos reservados.</p>
-    </footer>
-
+    @endsection
+   
+       
+    @push('scripts')  <!-- agregado -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Selección de días en el calendario
@@ -712,5 +695,6 @@
             });
         });
     </script>
+    @endpush
 </body>
 </html>

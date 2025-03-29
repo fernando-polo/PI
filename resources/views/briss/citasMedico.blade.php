@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OncoCheck - Agenda Clínica</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+@extends('layouts.templateMedico')
+
+@section('titulo', 'OncoCheck - Historial de citas')
+
+@push('styles')
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -590,23 +588,73 @@
 .modal-content::-webkit-scrollbar-thumb:hover {
     background: #6a1b9a;
 }
+
+/* Estilos específicos para el modal de información */
+.info-section {
+    margin-bottom: 20px;
+}
+
+.info-section h3 {
+    color: #6a1b9a;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.form-label {
+    width: 45%;
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-input {
+    width: 55%;
+}
+
+.small-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.small-input:focus {
+    border-color: #a44ddb;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(164, 77, 219, 0.2);
+}
+
+.save-btn {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.save-btn:hover {
+    background-color: #5a148a;
+}
     </style>
+     @endpush
 </head>
+@section('contenido') 
 <body>
-    <!-- Barra de navegación principal -->
-    <nav class="navbar">
-        <div style="display: flex; align-items: center;">
-            <div class="navbar-brand">OncoCheck</div>
-            <div class="nav-links">
-                <a href="#" class="nav-link">Citas</a>
-                <a href="#" class="nav-link active">Agenda</a>
-                <a href="#" class="nav-link">Historial</a>
-            </div>
-        </div>
-        <div class="user-icon" onclick="window.location.href='perfil.html'">
-            <i class="fas fa-user"></i>
-        </div>
-    </nav>
+
 
 <!-- Contenido principal -->
 <div class="main-content">
@@ -662,7 +710,7 @@
                     </div>
                 </div>
                 
-                <button class="edit-profile-btn">
+                <button class="edit-profile-btn" id="editarBtn">
                     <i class="fas fa-edit"></i> Editar información
                 </button>
             </div>
@@ -849,11 +897,76 @@
         </div>
     </div>
 
-    <!-- Pie de página -->
-    <footer class="footer">
-        <p>Copyright © 2025 OncoCheck<br>Todos los derechos reservados.</p>
-    </footer>
-
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Nueva sección de foto y datos básicos -->
+                <div class="doctor-profile-section">
+                    <div class="doctor-photo-container">
+                        <img src="https://via.placeholder.com/100" alt="Foto del doctor" class="doctor-photo">
+                    </div>
+                    <div class="doctor-basic-info">
+                        <h2>Dra Susana Villagomez</h2>
+                        <p><small>Correo: susanavillagomez020@gmail.com</small></p>
+                        <p><small>Tel: 4424082293</small></p>
+                    </div>
+                </div>
+    
+                <div class="divider-line"></div>
+    
+                <div class="info-section">
+                    <h3>Cambiar información personal</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-label">Número de teléfono:</div>
+                        <div class="form-input">
+                            <input type="tel" placeholder="4424082293" class="small-input">
+                        </div>
+                    </div>
+                    
+                    <div class="divider-line-light"></div>
+                    
+                    <div class="form-row">
+                        <div class="form-label">Años de experiencia:</div>
+                        <div class="form-input">
+                            <input type="text" placeholder="" class="small-input">
+                        </div>
+                    </div>
+                    
+                    <div class="divider-line-light"></div>
+                    
+                    <div class="form-row">
+                        <div class="form-label">Idiomas:</div>
+                        <div class="form-input">
+                            <input type="text" placeholder="" class="small-input">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="divider-line"></div>
+    
+                <div class="info-section">
+                    <h3>Cambiar correo</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-label">Nuevo correo:</div>
+                        <div class="form-input">
+                            <input type="email" placeholder="@gmail.com" class="small-input">
+                        </div>
+                    </div>
+                    
+                    <button class="save-btn">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endsection
+    
+    
+    @push('scripts')  <!-- agregado -->
     <script>
         // Puedes añadir aquí funcionalidad JavaScript para el calendario
         document.addEventListener('DOMContentLoaded', function() {
@@ -894,6 +1007,32 @@
                 }
             }
         });
+
+    
+    // modal info
+    const editarBtn = document.getElementById('editarBtn');
+    const modal = document.getElementById('infoModal');
+    const closeBtn = document.getElementById('closeModal');
+
+    // Abrir modal al hacer clic en "Editar información"
+    editarBtn.addEventListener('click', () => {
+        modal.style.display = 'flex';
+    });
+
+    // Cerrar modal al hacer clic en la "X" (×)
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Cerrar modal si se hace clic fuera del contenido
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+</script>
+
     </script>
+    @endpush
 </body>
 </html>

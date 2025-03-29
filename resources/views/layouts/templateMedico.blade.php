@@ -27,10 +27,23 @@
 
         <!-- Estilos específicos para vistas médicas -->
         @stack('styles')
+
+        <style>
+            /* Estilo para el elemento activo en la barra de navegación */
+            .navbar-nav .nav-item .nav-link.active {
+                color: #6a1b9a !important; /* Morado intenso */
+                font-weight: bold;
+            }
+            
+            /* Color blanco para todos los enlaces */
+            .navbar-nav .nav-item .nav-link {
+                color: white !important;
+            }
+        </style>
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="NavBar">
+            <nav class="navbar navbar-expand-lg navbar-dark" id="NavBar" style="background-color: #8F7ADA;">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="{{route('rutaInicio')}}">
                         <img src="{{ asset('images/OncoCheck.jpeg') }}" alt="Logo - Clínica Médica" width="40" height="40">
@@ -41,13 +54,16 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 ms-2"> 
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('rutaInicio') }}#NuestrosEstudios">Citas</a>
+                                <a class="nav-link {{ request()->routeIs('principal') ? 'active' : '' }}" href="{{ route('principal') }}#NuestrosEstudios">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('rutaInicio') }}#MedicosDePrimera">Disponibilidad</a>
+                                <a class="nav-link {{ request()->routeIs('citas') ? 'active' : '' }}" href="{{ route('citas') }}#NuestrosEstudios">Citas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('historial-citas') }}">Historial de citas</a>
+                                <a class="nav-link {{ request()->routeIs('disponibilidad') ? 'active' : '' }}" href="{{ route('disponibilidad') }}#MedicosDePrimera">Disponibilidad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ request()->routeIs('historial-citas') ? 'active' : '' }}" href="{{ route('historial-citas') }}">Historial de citas</a>
                             </li>
                         </ul>
                         <div class="user-icon" onclick="window.location.href='perfil.html'">

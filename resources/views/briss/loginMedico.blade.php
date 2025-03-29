@@ -61,8 +61,8 @@
 }
         
         .login-image img {
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 90%;
+            max-height: 90%;
             object-fit: contain;
         }
         
@@ -250,7 +250,7 @@
     <div class="main-content">
         <div class="login-container">
             <div class="login-image">
-                <img src="{{ asset('images/loginMedico.jpg') }}" alt="Imagen descriptiva">
+                <img src="{{ asset('images/NE_Colonoscopia.jpg') }}" alt="Imagen descriptiva">
             </div>
             
             <div class="login-form">
