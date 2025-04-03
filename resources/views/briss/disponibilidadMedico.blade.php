@@ -415,7 +415,7 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-link">
+                    <a href="{{ route('historial-citas') }}" class="menu-link">
                         <i class="fas fa-history"></i>
                         <span>Historial de citas</span>
                     </a>

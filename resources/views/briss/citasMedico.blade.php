@@ -903,6 +903,7 @@
                 <button class="close-btn" id="closeModal">&times;</button>
             </div>
             <div class="modal-body">
+                
                 <!-- Nueva sección de foto y datos básicos -->
                 <div class="doctor-profile-section">
                     <div class="doctor-photo-container">

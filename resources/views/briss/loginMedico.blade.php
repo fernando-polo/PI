@@ -258,7 +258,7 @@
                 
                 <h1>Bienvenido</h1>
                 
-                <form method="POST" action="{{ route('login') }}">
+                <form method="POST" action="{{ route('medico.login') }}">
                     @csrf
                     
                     <div class="form-group">
@@ -284,7 +284,7 @@
                         </div>
                     </div>
                     
-                    <button type="submit" class="btn-login">Iniciar Sesión</button>
+                    <button type="submit" class="btn-login" href="{{ route('principal') }}">Iniciar Sesión</button>
                 </form>
             </div>
         </div>
@@ -321,3 +321,4 @@
     </script>
 </body>
 </html>
+

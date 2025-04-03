@@ -27,9 +27,22 @@ Route::get('/estudios/crear', [controladorEstudios::class, 'create'])->name('rut
 Route::post('/estudios/guardar', [controladorEstudios::class, 'store'])->name('rutaGuardarEstudios');
 
 // Ruta para el login médico (con subcarpeta briss)
+Route::match(['get', 'post'], '/medico/login', function () {
+    if (request()->isMethod('post')) {
+        // Aquí iría la lógica para procesar el login
+        // Por ejemplo:
+        // 1. Validar credenciales
+        // 2. Autenticar al médico
+        // 3. Redirigir a la página principal
+        
+        return redirect()->route('principal'); 
+    }
+});
+    
+    // Si es GET, mostrar el formulario de login
 Route::get('/medico/login', function() {
-    return view('briss.loginMedico'); // Vista en subcarpeta briss
-})->name('login');
+    return view('briss.loginMedico');
+})->name('medico.login');  // Cambié el nombre para ser más específico
 
 // Ruta para vista principal medico
 Route::get('/medico/principal', function() {
