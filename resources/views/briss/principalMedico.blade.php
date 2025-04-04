@@ -736,7 +736,7 @@
                         </tbody>
                     </table>
     
-                    <a href="#" class="btn">Ver más</a>
+                    <a href="{{ route('historial-citas') }}" class="btn">Ver más</a>
                 </div>
             </div>
     
@@ -766,7 +766,7 @@
                             Calle Matamoros 28, Queretaro<br><br>
                             Primera visita clínica (120)<br>
                             Visitas sucesivas<br>
-                            Tratamientos + 15 <a href="#">ver más</a>
+                            Tratamientos + 15 <a href="{{ route('historial-citas') }}">ver más</a>
                         </label>
                     </div>
                 </div>

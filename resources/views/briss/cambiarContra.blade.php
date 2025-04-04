@@ -61,8 +61,8 @@
 }
         
         .password-image img {
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 90%;
+            max-height: 90%;
             object-fit: contain;
         }
         
@@ -256,11 +256,11 @@
     <div class="main-content">
         <div class="password-container">
             <div class="password-image">
-                <img src="{{ asset('images/cambiarContra.jpg')}}" alt="Imagen descriptiva">
+                <img src="{{ asset('images/NE_Papanicolau.jpg')}}" alt="Imagen descriptiva">
             </div>
             
             <div class="password-form">
-                <img src="{{ asset('images/logo.png') }}" alt="OncoCheck Logo" class="logo">
+                <img src="{{ asset('images/OncoCheck.jpeg') }}" alt="OncoCheck Logo" class="logo">
                 
                 <h1>Cambiar contraseña</h1>
                 <h2>Escriba su nueva contraseña</h2>

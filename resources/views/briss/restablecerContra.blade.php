@@ -104,7 +104,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="{{ asset('ruta/a/tu/imagen.png') }}" alt="Logo" class="logo">
+        <img src="{{ asset('images/OncoCheck.jpeg') }}" alt="Logo" class="logo">
         
         <div class="form-content">
             <h1>Restablecer contraseña</h1>
