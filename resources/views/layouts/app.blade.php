@@ -82,7 +82,7 @@
                     <div class="text-end">
                         <form class="container-fluid justify-content-end">
                             <a href="{{route('rutainiciarSesionAdmin')}}" class="btn btn-sm btn-outline-primary" style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);">Administrativo</a>
-                            <a href="{{route('login')}}" class="btn btn-sm btn-outline-primary" style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);">Medico</a>
+                            <a href="{{route('medico.login')}}" class="btn btn-sm bstn-outline-primary" style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);">Medico</a>
                             <a href="{{route('rutaRegistro')}}" class="btn btn-sm btn-outline-primary" style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);">Registrarse</a>
                             <a href="{{route('rutaIniciarSesion')}}" class="btn btn-sm btn-outline-secondary" style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);">Iniciar Sesión</a>             
                         </form>
