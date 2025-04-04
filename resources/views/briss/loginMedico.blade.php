@@ -61,8 +61,8 @@
 }
         
         .login-image img {
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 90%;
+            max-height: 90%;
             object-fit: contain;
         }
         
@@ -250,7 +250,7 @@
     <div class="main-content">
         <div class="login-container">
             <div class="login-image">
-                <img src="{{ asset('images/loginMedico.jpg') }}" alt="Imagen descriptiva">
+                <img src="{{ asset('images/NE_Colonoscopia.jpg') }}" alt="Imagen descriptiva">
             </div>
             
             <div class="login-form">
@@ -258,7 +258,7 @@
                 
                 <h1>Bienvenido</h1>
                 
-                <form method="POST" action="{{ route('login') }}">
+                <form method="POST" action="{{ route('medico.login') }}">
                     @csrf
                     
                     <div class="form-group">
@@ -284,7 +284,7 @@
                         </div>
                     </div>
                     
-                    <button type="submit" class="btn-login">Iniciar Sesión</button>
+                    <button type="submit" class="btn-login" href="{{ route('principal') }}">Iniciar Sesión</button>
                 </form>
             </div>
         </div>
@@ -321,3 +321,4 @@
     </script>
 </body>
 </html>
+
